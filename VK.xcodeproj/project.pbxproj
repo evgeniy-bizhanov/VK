@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18BD9722085B67000C6417 /* AppConfig.swift */; };
+		7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */; };
+		7AAE110122086FCE005E82DE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* MainCoordinator.swift */; };
+		7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11022208706B005E82DE /* AppCoordinator.swift */; };
+		7AAE1105220872E4005E82DE /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE1104220872E4005E82DE /* AuthCoordinator.swift */; };
 		7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF867402208150E007B7A8F /* AppDelegate.swift */; };
 		7AF867482208150F007B7A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867472208150F007B7A8F /* Assets.xcassets */; };
 		7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867492208150F007B7A8F /* LaunchScreen.storyboard */; };
@@ -15,6 +19,10 @@
 
 /* Begin PBXFileReference section */
 		7A18BD9722085B67000C6417 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
+		7AAE110022086FCE005E82DE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		7AAE11022208706B005E82DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7AAE1104220872E4005E82DE /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		7AF8673D2208150E007B7A8F /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF867402208150E007B7A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AF867472208150F007B7A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				7AF867402208150E007B7A8F /* AppDelegate.swift */,
+				7AAE11022208706B005E82DE /* AppCoordinator.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -55,6 +64,8 @@
 		7A18BD95220858EB000C6417 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				7AAE110022086FCE005E82DE /* MainCoordinator.swift */,
+				7AAE1104220872E4005E82DE /* AuthCoordinator.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -62,8 +73,17 @@
 		7A18BD9622085972000C6417 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7AAE10FA22086F33005E82DE /* Navigation */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		7AAE10FA22086F33005E82DE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		7AF867342208150E007B7A8F = {
@@ -164,7 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */,
+				7AAE110122086FCE005E82DE /* MainCoordinator.swift in Sources */,
+				7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
+				7AAE1105220872E4005E82DE /* AuthCoordinator.swift in Sources */,
+				7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
