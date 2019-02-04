@@ -8,6 +8,10 @@
 
 struct AppConfig {
     
+    struct Api {
+        static let version = "5.92"
+    }
+    
     
     // MARK: - Authentication
     
