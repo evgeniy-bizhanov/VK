@@ -12,6 +12,11 @@
 		7AAE110122086FCE005E82DE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* MainCoordinator.swift */; };
 		7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11022208706B005E82DE /* AppCoordinator.swift */; };
 		7AAE1105220872E4005E82DE /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE1104220872E4005E82DE /* AuthCoordinator.swift */; };
+		7AAE110922088C47005E82DE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AAE110822088C47005E82DE /* Auth.storyboard */; };
+		7AAE110B22088C86005E82DE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110A22088C86005E82DE /* AuthViewController.swift */; };
+		7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110D22088E6F005E82DE /* UIStoryboard.swift */; };
+		7AAE111022088EB0005E82DE /* Identifable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110F22088EB0005E82DE /* Identifable.swift */; };
+		7AAE111222088EDC005E82DE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111122088EDC005E82DE /* UIViewController.swift */; };
 		7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF867402208150E007B7A8F /* AppDelegate.swift */; };
 		7AF867482208150F007B7A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867472208150F007B7A8F /* Assets.xcassets */; };
 		7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867492208150F007B7A8F /* LaunchScreen.storyboard */; };
@@ -23,6 +28,11 @@
 		7AAE110022086FCE005E82DE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		7AAE11022208706B005E82DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		7AAE1104220872E4005E82DE /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		7AAE110822088C47005E82DE /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		7AAE110A22088C86005E82DE /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		7AAE110D22088E6F005E82DE /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		7AAE110F22088EB0005E82DE /* Identifable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifable.swift; sourceTree = "<group>"; };
+		7AAE111122088EDC005E82DE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7AF8673D2208150E007B7A8F /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF867402208150E007B7A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AF867472208150F007B7A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,8 +74,8 @@
 		7A18BD95220858EB000C6417 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				7AAE110722088C2B005E82DE /* Auth */,
 				7AAE110022086FCE005E82DE /* MainCoordinator.swift */,
-				7AAE1104220872E4005E82DE /* AuthCoordinator.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -73,6 +83,8 @@
 		7A18BD9622085972000C6417 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7AAE110F22088EB0005E82DE /* Identifable.swift */,
+				7AAE110C22088E5B005E82DE /* Extensions */,
 				7AAE10FA22086F33005E82DE /* Navigation */,
 			);
 			path = Core;
@@ -84,6 +96,25 @@
 				7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		7AAE110722088C2B005E82DE /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE110822088C47005E82DE /* Auth.storyboard */,
+				7AAE110A22088C86005E82DE /* AuthViewController.swift */,
+				7AAE1104220872E4005E82DE /* AuthCoordinator.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		7AAE110C22088E5B005E82DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE110D22088E6F005E82DE /* UIStoryboard.swift */,
+				7AAE111122088EDC005E82DE /* UIViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7AF867342208150E007B7A8F = {
@@ -171,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AAE110922088C47005E82DE /* Auth.storyboard in Resources */,
 				7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */,
 				7AF867482208150F007B7A8F /* Assets.xcassets in Resources */,
 			);
@@ -186,6 +218,10 @@
 				7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */,
 				7AAE110122086FCE005E82DE /* MainCoordinator.swift in Sources */,
 				7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */,
+				7AAE110B22088C86005E82DE /* AuthViewController.swift in Sources */,
+				7AAE111222088EDC005E82DE /* UIViewController.swift in Sources */,
+				7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */,
+				7AAE111022088EB0005E82DE /* Identifable.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
 				7AAE1105220872E4005E82DE /* AuthCoordinator.swift in Sources */,
 				7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */,

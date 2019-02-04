@@ -1,5 +1,5 @@
 //
-//  AuthCoordinator.swift
+//  UIViewController.swift
 //  VK
 //
 //  Created by Евгений Бижанов on 04/02/2019.
@@ -8,8 +8,5 @@
 
 import UIKit
 
-final class AuthCoordinator: AbstractCoordinator {
-    override func start() {
-        print("Auth")
-    }
-}
+// MARK: - Identifiable
+extension UIViewController: Identifiable { }
