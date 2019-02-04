@@ -14,6 +14,7 @@ struct AppConfig {
     struct Authentication {
         static let id = "6349018"
         static let key = "hg792B7zrq7AOY73MZrv"
+        static let url = "https://oauth.vk.com/authorize"
     }
     
 }
