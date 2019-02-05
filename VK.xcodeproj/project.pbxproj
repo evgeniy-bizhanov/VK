@@ -18,6 +18,10 @@
 		7AAE111022088EB0005E82DE /* Identifable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110F22088EB0005E82DE /* Identifable.swift */; };
 		7AAE111222088EDC005E82DE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111122088EDC005E82DE /* UIViewController.swift */; };
 		7AAE111422095A06005E82DE /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111322095A06005E82DE /* AuthPresenter.swift */; };
+		7AAE111922096324005E82DE /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111822096324005E82DE /* RequestRouter.swift */; };
+		7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111B220963ED005E82DE /* KeyValueStorage.swift */; };
+		7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111D22096798005E82DE /* KeychainStorage.swift */; };
+		7AAE1120220980E2005E82DE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111F220980E2005E82DE /* Result.swift */; };
 		7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF867402208150E007B7A8F /* AppDelegate.swift */; };
 		7AF867482208150F007B7A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867472208150F007B7A8F /* Assets.xcassets */; };
 		7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867492208150F007B7A8F /* LaunchScreen.storyboard */; };
@@ -38,6 +42,10 @@
 		7AAE110F22088EB0005E82DE /* Identifable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifable.swift; sourceTree = "<group>"; };
 		7AAE111122088EDC005E82DE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7AAE111322095A06005E82DE /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		7AAE111822096324005E82DE /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		7AAE111B220963ED005E82DE /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
+		7AAE111D22096798005E82DE /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		7AAE111F220980E2005E82DE /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7AF8673D2208150E007B7A8F /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF867402208150E007B7A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AF867472208150F007B7A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,9 +106,11 @@
 		7A18BD9622085972000C6417 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7AAE111F220980E2005E82DE /* Result.swift */,
 				7AAE110F22088EB0005E82DE /* Identifable.swift */,
 				7AAE110C22088E5B005E82DE /* Extensions */,
 				7AAE10FA22086F33005E82DE /* Navigation */,
+				7AAE1117220962E3005E82DE /* Networking */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -133,6 +143,31 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7AAE1116220962A7005E82DE /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE111A220963C2005E82DE /* Storage */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		7AAE1117220962E3005E82DE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE111822096324005E82DE /* RequestRouter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7AAE111A220963C2005E82DE /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE111B220963ED005E82DE /* KeyValueStorage.swift */,
+				7AAE111D22096798005E82DE /* KeychainStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		7AF867342208150E007B7A8F = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				7A18BD94220858DC000C6417 /* AppDelegate */,
+				7AAE1116220962A7005E82DE /* Business */,
 				7A18BD95220858EB000C6417 /* Flow */,
 				7A18BD9622085972000C6417 /* Core */,
 				7A18BD93220858A5000C6417 /* Resources */,
@@ -250,6 +286,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VK/Pods-VK-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -257,6 +294,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,9 +337,13 @@
 				7AAE110B22088C86005E82DE /* AuthViewController.swift in Sources */,
 				7AAE111222088EDC005E82DE /* UIViewController.swift in Sources */,
 				7AAE111422095A06005E82DE /* AuthPresenter.swift in Sources */,
+				7AAE1120220980E2005E82DE /* Result.swift in Sources */,
 				7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */,
 				7AAE111022088EB0005E82DE /* Identifable.swift in Sources */,
+				7AAE111922096324005E82DE /* RequestRouter.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
+				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
+				7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */,
 				7AAE1105220872E4005E82DE /* AuthCoordinator.swift in Sources */,
 				7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */,
 			);

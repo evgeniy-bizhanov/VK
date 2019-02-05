@@ -9,5 +9,6 @@ target 'VK' do
 
   pod 'Alamofire'
   pod 'Swinject'
+  pod 'KeychainAccess', '~> 3.1'
 
 end
