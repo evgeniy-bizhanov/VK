@@ -9,6 +9,10 @@
 import UIKit
 import WebKit
 
+protocol AuthOutput {
+    func reload(with url: URL)
+}
+
 class AuthViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -52,6 +56,13 @@ class AuthViewController: UIViewController {
     
     
     // MARK: - Initializers
+}
+
+extension AuthViewController: AuthOutput {
+    func reload(with url: URL) {
+        let request = URLRequest(url: url)
+        webView.load(request)
+    }
 }
 
 extension AuthViewController: WKNavigationDelegate {
