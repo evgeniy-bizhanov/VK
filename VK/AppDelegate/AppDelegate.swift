@@ -8,24 +8,33 @@
 
 import UIKit
 
-@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    // MARK: - Properties
+    
     var window: UIWindow?
-    var coordinator: AppCoordinator?
-
+    var coordinator: AbstractCoordinator?
+    var storage: KeyValueStorage?
+    
+    
+    // MARK: - Fields
+    // MARK: - Functions
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow()
         window?.makeKeyAndVisible()
-
-        coordinator = AppCoordinator()
         coordinator?.start()
         
         return true
     }
-
-
+    
+    
+    // MARK: - Initializers
+    
+    init(window: UIWindow?, coordinator: AbstractCoordinator?, storage: KeyValueStorage?) {
+        
+        self.window = window
+        self.coordinator = coordinator
+        self.storage = storage
+    }
 }
-

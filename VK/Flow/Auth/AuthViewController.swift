@@ -23,6 +23,10 @@ class AuthViewController: UIViewController {
     // MARK: - Models
     // MARK: - Services
     // MARK: - Properties
+    
+    var input: AuthInput?
+    
+    
     // MARK: - Fields
     // MARK: - IBActions
     // MARK: - Functions

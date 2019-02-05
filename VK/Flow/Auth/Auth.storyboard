@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Auth View Controller-->
+        <!--View Controller-->
         <scene sceneID="HbQ-3i-TGx">
             <objects>
                 <viewController id="Dn8-Aj-QGd" customClass="AuthViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,6 +41,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kT1-Vu-Nn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="spI-hc-FeY" customClass="AuthModuleBuilder" customModule="VK" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="Dn8-Aj-QGd" id="5bt-5j-P75"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="140" y="160"/>
         </scene>

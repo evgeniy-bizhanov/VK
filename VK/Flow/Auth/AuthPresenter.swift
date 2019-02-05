@@ -11,7 +11,30 @@ protocol AuthInput {
 }
 
 class AuthPresenter: AuthInput {
+    
+    // MARK: - Models
+    // MARK: - Services
+    
+    var storage: KeyValueStorage?
+    
+    
+    // MARK: - Properties
+    
+    var output: AuthOutput?
+    
+    
+    // MARK: - Fields
+    // MARK: - Functions
+    
     func didLoad() {
         ///
+    }
+    
+    
+    // MARK: - Initializers
+    
+    init(output: AuthOutput?, storage: KeyValueStorage?) {
+        self.output = output
+        self.storage = storage
     }
 }
