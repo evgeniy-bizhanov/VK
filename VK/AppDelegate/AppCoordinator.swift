@@ -10,12 +10,18 @@ import Foundation
 
 final class AppCoordinator: AbstractCoordinator {
     
+    var storage: KeyValueStorage?
+    
     override func start() {
-        if let token = UserDefaults.standard.value(forKey: "token") as? String {
-            navigateTo(MainCoordinator.self, parameters: ["token": token])
+        if let token = storage?.string(forKey: "token") {
+            navigateTo(ProfileCoordinator.self, parameters: ["token": token])
         } else {
             navigateTo(AuthCoordinator.self)
         }
-        
+    }
+    
+    convenience init(storage: KeyValueStorage?) {
+        self.init()
+        self.storage = storage
     }
 }

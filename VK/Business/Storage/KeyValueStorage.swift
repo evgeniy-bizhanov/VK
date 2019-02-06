@@ -9,4 +9,5 @@
 protocol KeyValueStorage {
     func string(forKey key: String) -> String?
     func set(value: String, forKey key: String)
+    func remove(withKey key: String)
 }

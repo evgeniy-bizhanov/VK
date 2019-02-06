@@ -9,14 +9,17 @@
 import KeychainAccess
 
 extension Keychain: KeyValueStorage {
+    
     func string(forKey key: String) -> String? {
         guard let result = try? get(key) else { return nil }
         return result
     }
     
     func set(value: String, forKey key: String) {
-        do {
-            try set(value, key: key)
-        } catch { }
+        try? set(value, key: key)
+    }
+    
+    func remove(withKey key: String) {
+        try? remove(key)
     }
 }

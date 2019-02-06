@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 protocol AuthOutput {
-    func reload(with url: URL)
+    func reload(withUrlRequest request: URLRequest)
 }
 
 class AuthViewController: UIViewController {
@@ -25,6 +25,7 @@ class AuthViewController: UIViewController {
     // MARK: - Properties
     
     var input: AuthInput?
+    var finishFlow: (() -> Void)?
     
     
     // MARK: - Fields
@@ -32,45 +33,69 @@ class AuthViewController: UIViewController {
     // MARK: - Functions
     
     override func viewDidLoad() {
-        webView.navigationDelegate = self
-        
-        let color = UIColor(red: 235/255, green: 237/255, blue: 240/255, alpha: 1)
-        self.webView.isOpaque = false
-        self.webView.backgroundColor = color
-        self.webView.scrollView.backgroundColor = color
-        
-        guard var components = URLComponents(string: AppConfig.Authentication.url) else {
-            return
-        }
-        
-        components.queryItems = [
-            URLQueryItem(name: "client_id", value: AppConfig.Authentication.id),
-            URLQueryItem(name: "redirect_uri", value: ""),
-            URLQueryItem(name: "scope", value: "friends"),
-            URLQueryItem(name: "response_type", value: "token"),
-            URLQueryItem(name: "v", value: AppConfig.Api.version),
-            URLQueryItem(name: "display", value: "mobile")
-        ]
-        
-        if let url = components.url {
-            let request = URLRequest(url: url)
-            webView.load(request)
-        }
+        setupWebView()
+        input?.didLoad()
     }
     
     
     // MARK: - Initializers
 }
 
+
+// MARK: - Fileprivate
+
+extension AuthViewController {
+    fileprivate func setupWebView() {
+        webView.navigationDelegate = self
+        
+        let color = UIColor(red: 235/255, green: 237/255, blue: 240/255, alpha: 1)
+        self.webView.isOpaque = false
+        self.webView.backgroundColor = color
+        self.webView.scrollView.backgroundColor = color
+    }
+}
+
+
+// MARK: - AuthOutput
+
 extension AuthViewController: AuthOutput {
-    func reload(with url: URL) {
-        let request = URLRequest(url: url)
+    func reload(withUrlRequest request: URLRequest) {
         webView.load(request)
     }
 }
 
+
+// MARK: - WKNavigationDelegate
+
 extension AuthViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         view.backgroundColor = UIColor(red: 90/255, green: 129/255, blue: 180/255, alpha: 1)
+    }
+    
+    func webView(
+        _ webView: WKWebView,
+        decidePolicyFor navigationAction: WKNavigationAction,
+        decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+        guard
+            let url = navigationAction.request.url,
+            let result = input?.retrieveToken(fromUrl: url) else {
+                
+                decisionHandler(.allow)
+                return
+        }
+        
+        let decision: WKNavigationActionPolicy
+
+        switch result {
+        case .error:
+            decision = .allow
+        case .success(let token):
+            decision = .cancel
+            input?.retrieved(token: token)
+            finishFlow?()
+        }
+
+        decisionHandler(decision)
     }
 }

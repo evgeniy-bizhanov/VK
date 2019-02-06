@@ -46,6 +46,7 @@ class AbstractCoordinator: Coordinator {
     }
 
     func setAsRoot(_ controller: UIViewController) {
+        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: false, completion: nil)
         UIApplication.shared.keyWindow?.rootViewController = controller
     }
     

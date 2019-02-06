@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     var coordinator: AbstractCoordinator?
-    var storage: KeyValueStorage?
     
     
     // MARK: - Fields
@@ -31,10 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Initializers
     
-    init(window: UIWindow?, coordinator: AbstractCoordinator?, storage: KeyValueStorage?) {
+    init(window: UIWindow?, coordinator: AbstractCoordinator?) {
         
         self.window = window
         self.coordinator = coordinator
-        self.storage = storage
     }
 }

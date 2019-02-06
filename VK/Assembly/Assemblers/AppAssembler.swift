@@ -16,13 +16,15 @@ class AppAssembler: Assembly {
         container.register(KeyValueStorage.self) { _ in return Keychain() }
         
         container.register(UIWindow.self) { _ in return UIWindow() }
-        container.register(AbstractCoordinator.self) { _ in return AppCoordinator() }
+        
+        container.register(AbstractCoordinator.self) { r in
+            return AppCoordinator(storage: r.resolve(KeyValueStorage.self))
+        }
         
         container.register(AppDelegate.self) { r in
             return AppDelegate(
                 window: r.resolve(UIWindow.self),
-                coordinator: r.resolve(AbstractCoordinator.self),
-                storage: r.resolve(KeyValueStorage.self)
+                coordinator: r.resolve(AbstractCoordinator.self)
             )
         }
     }
