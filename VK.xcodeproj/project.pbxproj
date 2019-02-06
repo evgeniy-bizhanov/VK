@@ -7,17 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18BD9722085B67000C6417 /* AppConfig.swift */; };
+		7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */; };
+		7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */; };
+		7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11022208706B005E82DE /* AppCoordinator.swift */; };
+		7AAE1105220872E4005E82DE /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE1104220872E4005E82DE /* AuthCoordinator.swift */; };
+		7AAE110922088C47005E82DE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AAE110822088C47005E82DE /* Auth.storyboard */; };
+		7AAE110B22088C86005E82DE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110A22088C86005E82DE /* AuthViewController.swift */; };
+		7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110D22088E6F005E82DE /* UIStoryboard.swift */; };
+		7AAE111022088EB0005E82DE /* Identifable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110F22088EB0005E82DE /* Identifable.swift */; };
+		7AAE111222088EDC005E82DE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111122088EDC005E82DE /* UIViewController.swift */; };
+		7AAE111422095A06005E82DE /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111322095A06005E82DE /* AuthPresenter.swift */; };
+		7AAE111922096324005E82DE /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111822096324005E82DE /* RequestRouter.swift */; };
+		7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111B220963ED005E82DE /* KeyValueStorage.swift */; };
+		7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE111D22096798005E82DE /* KeychainStorage.swift */; };
+		7AAE112222098784005E82DE /* AbstractModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE112122098784005E82DE /* AbstractModuleBuilder.swift */; };
+		7AAE1126220987E0005E82DE /* AuthAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE1125220987E0005E82DE /* AuthAssembler.swift */; };
+		7AAE1129220989CC005E82DE /* AuthModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE1128220989CC005E82DE /* AuthModuleBuilder.swift */; };
+		7AAE112B2209913A005E82DE /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE112A2209913A005E82DE /* AppAssembler.swift */; };
+		7AAE112D220994D2005E82DE /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE112C220994D2005E82DE /* AppBuilder.swift */; };
+		7AAE11302209D13D005E82DE /* AppDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE112F2209D13D005E82DE /* AppDelegateProxy.swift */; };
+		7AAE11322209ED7A005E82DE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11312209ED7A005E82DE /* Result.swift */; };
+		7AAE11352209F108005E82DE /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AAE11342209F108005E82DE /* Profile.storyboard */; };
+		7AAE11372209F15F005E82DE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11362209F15F005E82DE /* ProfileViewController.swift */; };
 		7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF867402208150E007B7A8F /* AppDelegate.swift */; };
 		7AF867482208150F007B7A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867472208150F007B7A8F /* Assets.xcassets */; };
 		7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867492208150F007B7A8F /* LaunchScreen.storyboard */; };
+		F375C6EE07A6574B6CFED2DE /* Pods_VK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5F35A0DA3BE81B29B68B76 /* Pods_VK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B5F35A0DA3BE81B29B68B76 /* Pods_VK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E93BFF524BA3FC5DC0ECA9A /* Pods-VK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.debug.xcconfig"; path = "Target Support Files/Pods-VK/Pods-VK.debug.xcconfig"; sourceTree = "<group>"; };
+		7A18BD9722085B67000C6417 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
+		7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		7AAE11022208706B005E82DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7AAE1104220872E4005E82DE /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		7AAE110822088C47005E82DE /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		7AAE110A22088C86005E82DE /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		7AAE110D22088E6F005E82DE /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		7AAE110F22088EB0005E82DE /* Identifable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifable.swift; sourceTree = "<group>"; };
+		7AAE111122088EDC005E82DE /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		7AAE111322095A06005E82DE /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		7AAE111822096324005E82DE /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		7AAE111B220963ED005E82DE /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
+		7AAE111D22096798005E82DE /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		7AAE112122098784005E82DE /* AbstractModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractModuleBuilder.swift; sourceTree = "<group>"; };
+		7AAE1125220987E0005E82DE /* AuthAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembler.swift; sourceTree = "<group>"; };
+		7AAE1128220989CC005E82DE /* AuthModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleBuilder.swift; sourceTree = "<group>"; };
+		7AAE112A2209913A005E82DE /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
+		7AAE112C220994D2005E82DE /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
+		7AAE112F2209D13D005E82DE /* AppDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateProxy.swift; sourceTree = "<group>"; };
+		7AAE11312209ED7A005E82DE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7AAE11342209F108005E82DE /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		7AAE11362209F15F005E82DE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7AF8673D2208150E007B7A8F /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF867402208150E007B7A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AF867472208150F007B7A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AF8674A2208150F007B7A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AF8674C2208150F007B7A8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A92FB670028D8A7E1D8E134E /* Pods-VK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.release.xcconfig"; path = "Target Support Files/Pods-VK/Pods-VK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,18 +75,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F375C6EE07A6574B6CFED2DE /* Pods_VK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		065A1287A91D4C98483A2D61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B5F35A0DA3BE81B29B68B76 /* Pods_VK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7A18BD93220858A5000C6417 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				7AF867472208150F007B7A8F /* Assets.xcassets */,
 				7AF867492208150F007B7A8F /* LaunchScreen.storyboard */,
 				7AF8674C2208150F007B7A8F /* Info.plist */,
+				7A18BD9722085B67000C6417 /* AppConfig.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -44,7 +104,9 @@
 		7A18BD94220858DC000C6417 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				7AAE112E2209D0F7005E82DE /* AppBuilder */,
 				7AF867402208150E007B7A8F /* AppDelegate.swift */,
+				7AAE11022208706B005E82DE /* AppCoordinator.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -52,6 +114,8 @@
 		7A18BD95220858EB000C6417 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				7AAE110722088C2B005E82DE /* Auth */,
+				7AAE11332209F0C5005E82DE /* Profile */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -59,8 +123,104 @@
 		7A18BD9622085972000C6417 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7AAE110F22088EB0005E82DE /* Identifable.swift */,
+				7AAE110C22088E5B005E82DE /* Extensions */,
+				7AAE10FA22086F33005E82DE /* Navigation */,
+				7AAE1117220962E3005E82DE /* Networking */,
+				7AAE11312209ED7A005E82DE /* Result.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		7AAE10FA22086F33005E82DE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		7AAE110722088C2B005E82DE /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE110822088C47005E82DE /* Auth.storyboard */,
+				7AAE1128220989CC005E82DE /* AuthModuleBuilder.swift */,
+				7AAE110A22088C86005E82DE /* AuthViewController.swift */,
+				7AAE111322095A06005E82DE /* AuthPresenter.swift */,
+				7AAE1104220872E4005E82DE /* AuthCoordinator.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		7AAE110C22088E5B005E82DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE110D22088E6F005E82DE /* UIStoryboard.swift */,
+				7AAE111122088EDC005E82DE /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7AAE1116220962A7005E82DE /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE111A220963C2005E82DE /* Storage */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		7AAE1117220962E3005E82DE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE111822096324005E82DE /* RequestRouter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7AAE111A220963C2005E82DE /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE111B220963ED005E82DE /* KeyValueStorage.swift */,
+				7AAE111D22096798005E82DE /* KeychainStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		7AAE112322098790005E82DE /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE1124220987BC005E82DE /* Assemblers */,
+				7AAE112122098784005E82DE /* AbstractModuleBuilder.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		7AAE1124220987BC005E82DE /* Assemblers */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE112A2209913A005E82DE /* AppAssembler.swift */,
+				7AAE1125220987E0005E82DE /* AuthAssembler.swift */,
+			);
+			path = Assemblers;
+			sourceTree = "<group>";
+		};
+		7AAE112E2209D0F7005E82DE /* AppBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE112C220994D2005E82DE /* AppBuilder.swift */,
+				7AAE112F2209D13D005E82DE /* AppDelegateProxy.swift */,
+			);
+			path = AppBuilder;
+			sourceTree = "<group>";
+		};
+		7AAE11332209F0C5005E82DE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7AAE11342209F108005E82DE /* Profile.storyboard */,
+				7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */,
+				7AAE11362209F15F005E82DE /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		7AF867342208150E007B7A8F = {
@@ -68,6 +228,8 @@
 			children = (
 				7AF8673F2208150E007B7A8F /* VK */,
 				7AF8673E2208150E007B7A8F /* Products */,
+				C1884FBB0749B9C4AE8BE160 /* Pods */,
+				065A1287A91D4C98483A2D61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,12 +244,23 @@
 		7AF8673F2208150E007B7A8F /* VK */ = {
 			isa = PBXGroup;
 			children = (
+				7AAE112322098790005E82DE /* Assembly */,
 				7A18BD94220858DC000C6417 /* AppDelegate */,
+				7AAE1116220962A7005E82DE /* Business */,
 				7A18BD95220858EB000C6417 /* Flow */,
 				7A18BD9622085972000C6417 /* Core */,
 				7A18BD93220858A5000C6417 /* Resources */,
 			);
 			path = VK;
+			sourceTree = "<group>";
+		};
+		C1884FBB0749B9C4AE8BE160 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E93BFF524BA3FC5DC0ECA9A /* Pods-VK.debug.xcconfig */,
+				A92FB670028D8A7E1D8E134E /* Pods-VK.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AF8674F2208150F007B7A8F /* Build configuration list for PBXNativeTarget "VK" */;
 			buildPhases = (
+				E13E753E6678584E940D1FAF /* [CP] Check Pods Manifest.lock */,
 				7AF867392208150E007B7A8F /* Sources */,
 				7AF8673A2208150E007B7A8F /* Frameworks */,
 				7AF8673B2208150E007B7A8F /* Resources */,
+				57F970B8D4287B6283611971 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,19 +323,93 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AAE110922088C47005E82DE /* Auth.storyboard in Resources */,
 				7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */,
+				7AAE11352209F108005E82DE /* Profile.storyboard in Resources */,
 				7AF867482208150F007B7A8F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		57F970B8D4287B6283611971 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VK/Pods-VK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VK/Pods-VK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E13E753E6678584E940D1FAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7AF867392208150E007B7A8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AAE11302209D13D005E82DE /* AppDelegateProxy.swift in Sources */,
 				7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */,
+				7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */,
+				7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */,
+				7AAE112D220994D2005E82DE /* AppBuilder.swift in Sources */,
+				7AAE110B22088C86005E82DE /* AuthViewController.swift in Sources */,
+				7AAE11372209F15F005E82DE /* ProfileViewController.swift in Sources */,
+				7AAE111222088EDC005E82DE /* UIViewController.swift in Sources */,
+				7AAE1126220987E0005E82DE /* AuthAssembler.swift in Sources */,
+				7AAE111422095A06005E82DE /* AuthPresenter.swift in Sources */,
+				7AAE112222098784005E82DE /* AbstractModuleBuilder.swift in Sources */,
+				7AAE1129220989CC005E82DE /* AuthModuleBuilder.swift in Sources */,
+				7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */,
+				7AAE111022088EB0005E82DE /* Identifable.swift in Sources */,
+				7AAE111922096324005E82DE /* RequestRouter.swift in Sources */,
+				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
+				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
+				7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */,
+				7AAE112B2209913A005E82DE /* AppAssembler.swift in Sources */,
+				7AAE11322209ED7A005E82DE /* Result.swift in Sources */,
+				7AAE1105220872E4005E82DE /* AuthCoordinator.swift in Sources */,
+				7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +545,7 @@
 		};
 		7AF867502208150F007B7A8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E93BFF524BA3FC5DC0ECA9A /* Pods-VK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +564,7 @@
 		};
 		7AF867512208150F007B7A8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A92FB670028D8A7E1D8E134E /* Pods-VK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
