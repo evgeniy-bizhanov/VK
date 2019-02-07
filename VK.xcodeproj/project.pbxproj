@@ -31,7 +31,7 @@
 		7AAE11322209ED7A005E82DE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11312209ED7A005E82DE /* Result.swift */; };
 		7AAE11352209F108005E82DE /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AAE11342209F108005E82DE /* Profile.storyboard */; };
 		7AAE11372209F15F005E82DE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11362209F15F005E82DE /* ProfileViewController.swift */; };
-		7AAE1139220AB374005E82DE /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE1138220AB374005E82DE /* Singleton.swift */; };
+		7AAE1139220AB374005E82DE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE1138220AB374005E82DE /* Session.swift */; };
 		7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF867402208150E007B7A8F /* AppDelegate.swift */; };
 		7AF867482208150F007B7A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867472208150F007B7A8F /* Assets.xcassets */; };
 		7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867492208150F007B7A8F /* LaunchScreen.storyboard */; };
@@ -63,7 +63,7 @@
 		7AAE11312209ED7A005E82DE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7AAE11342209F108005E82DE /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7AAE11362209F15F005E82DE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		7AAE1138220AB374005E82DE /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		7AAE1138220AB374005E82DE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		7AF8673D2208150E007B7A8F /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF867402208150E007B7A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AF867472208150F007B7A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				7AAE111A220963C2005E82DE /* Storage */,
-				7AAE1138220AB374005E82DE /* Singleton.swift */,
+				7AAE1138220AB374005E82DE /* Session.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 				7AAE1129220989CC005E82DE /* AuthModuleBuilder.swift in Sources */,
 				7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */,
 				7AAE111022088EB0005E82DE /* Identifable.swift in Sources */,
-				7AAE1139220AB374005E82DE /* Singleton.swift in Sources */,
+				7AAE1139220AB374005E82DE /* Session.swift in Sources */,
 				7AAE111922096324005E82DE /* RequestRouter.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
 				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
