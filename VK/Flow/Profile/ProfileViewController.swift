@@ -8,4 +8,12 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {}
+class ProfileViewController: UIViewController {
+    @IBOutlet weak var token: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        token.text = Singleton.shared.token
+    }
+}

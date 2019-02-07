@@ -33,6 +33,8 @@ class AuthViewController: UIViewController {
     // MARK: - Functions
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         setupWebView()
         input?.didLoad()
     }
