@@ -69,11 +69,12 @@ fileprivate extension AppConfig.Authentication {
         
         components.queryItems = [
             URLQueryItem(name: "client_id", value: AppConfig.Authentication.id),
-            URLQueryItem(name: "redirect_uri", value: ""),
-            URLQueryItem(name: "scope", value: "friends"),
+            URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
+            URLQueryItem(name: "display", value: "mobile"),
+            URLQueryItem(name: "scope", value: "offline, friends, photos, messages, wall, groups, notifications"),
             URLQueryItem(name: "response_type", value: "token"),
-            URLQueryItem(name: "v", value: AppConfig.Api.version),
-            URLQueryItem(name: "display", value: "mobile")
+            URLQueryItem(name: "state", value: "success"),
+            URLQueryItem(name: "v", value: AppConfig.Api.version)
         ]
         
         if let url = components.url {
