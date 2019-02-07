@@ -76,28 +76,31 @@ extension AuthViewController: WKNavigationDelegate {
     
     func webView(
         _ webView: WKWebView,
-        decidePolicyFor navigationAction: WKNavigationAction,
-        decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        decidePolicyFor navigationResponse: WKNavigationResponse,
+        decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        
+        var decision = WKNavigationResponsePolicy.allow
         
         guard
-            let url = navigationAction.request.url,
-            let result = input?.retrieveToken(fromUrl: url) else {
+            let url = navigationResponse.response.url, url.path == "/blank.html",
+            let fragment = url.fragment else {
                 
-                decisionHandler(.allow)
+                decisionHandler(decision)
                 return
         }
         
-        let decision: WKNavigationActionPolicy
-
-        switch result {
-        case .error:
-            decision = .allow
-        case .success(let token):
-            decision = .cancel
-            input?.retrieved(token: token)
-            finishFlow?()
+        let params = fragment.components(separatedBy: "&")
+            .map { $0.components(separatedBy: "=") }.reduce(into: [String: String]()) { result, param in
+                let key = param[0]
+                let value = param[1]
+                result[key] = value
         }
-
+        
+        if params["state"] == "success" {
+            input?.retrieved(token: params["access_token"], forUser: params["user_id"])
+            decision = .cancel
+        }
+        
         decisionHandler(decision)
     }
 }

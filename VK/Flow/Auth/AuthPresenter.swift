@@ -10,8 +10,7 @@ import Foundation
 
 protocol AuthInput {
     func didLoad()
-    func retrieveToken(fromUrl url: URL) -> Result<String>
-    func retrieved(token: String)
+    func retrieved(token: String?, forUser userId: String?)
 }
 
 class AuthPresenter: AuthInput {
@@ -36,19 +35,13 @@ class AuthPresenter: AuthInput {
         }
     }
     
-    func retrieveToken(fromUrl url: URL) -> Result<String> {
-        guard
-            let fragment = url.fragment,
-            fragment.range(of: "access_token") != nil,
-            let token = fragment.components(separatedBy: "access_token=").last else {
-                return .error("В переданном url токен не найден")
+    func retrieved(token: String?, forUser userId: String?) {
+        guard let token = token, let userId = userId else {
+            fatalError("Token or user id is nil")
         }
         
-        return .success(token)
-    }
-    
-    func retrieved(token: String) {
         storage?.set(value: token, forKey: "token")
+        storage?.set(value: userId, forKey: "userId")
     }
     
     
