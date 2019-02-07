@@ -14,7 +14,6 @@ final class AppCoordinator: AbstractCoordinator {
     
     override func start() {
         if let token = storage?.string(forKey: "token") {
-            Session.shared.token = token
             navigateTo(ProfileCoordinator.self, parameters: ["token": token])
         } else {
             navigateTo(AuthCoordinator.self)

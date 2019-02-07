@@ -13,7 +13,5 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        token.text = Session.shared.token
     }
 }
