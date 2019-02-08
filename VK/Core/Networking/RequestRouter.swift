@@ -17,15 +17,10 @@ protocol RequestRouter: URLRequestConvertible {
     var url: URL { get }
     var httpMethod: HTTPMethod { get }
     var encoding: RequestRouterEncoding { get }
-    var method: String { get }
+    var apiMethod: String { get }
     
     var parameters: Parameters? { get }
 }
-
-//protocol RequestParameter {
-//
-//    func parameters() -> Parameters?
-//}
 
 extension RequestRouter {
     
@@ -41,10 +36,14 @@ extension RequestRouter {
     
     func asURLRequest() throws -> URLRequest {
         
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = httpMethod.rawValue
+        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+            fatalError("Invalid url")
+        }
         
-//        let parameters = (self as? RequestParameter)?.parameters() ?? self.parameters
+        urlComponents.path = apiMethod
+        
+        var urlRequest = URLRequest(url: try urlComponents.asURL())
+        urlRequest.httpMethod = httpMethod.rawValue
         
         switch self.encoding {
         case .url:
