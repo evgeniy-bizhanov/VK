@@ -6,6 +6,8 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
+import Foundation
+
 protocol ProfileInput {
     func didLoad()
 }
@@ -37,15 +39,16 @@ class ProfilePresenter: ProfileInput {
             fatalError("User id can't be null")
         }
         
-        requestManager?.get(forUser: userId, count: 1, offset: 0) { response in
-            print("-- FRIENDS --")
-            print(response.value?.response.items)
+        (requestManager as? FriendsRequestManager)?.get(forUser: userId, count: 1, offset: 0) { response in
+            print("\n-- FRIENDS --\n \(response.value?.response.items)")
         }
         
         requestManager?.get(forUser: userId, albumId: .profile, count: 1, offset: 0) { response in
-            print()
-            print("-- PHOTOS --")
-            print(response.value?.response.items)
+            print("\n-- PHOTOS --\n \(response.value?.response.items)")
+        }
+        
+        (requestManager as? GroupsRequestManager)?.get(forUser: userId, count: 1, offset: 0) { response in
+            print("\n-- GROUPS --\n \(response.value?.response.items)")
         }
     }
     

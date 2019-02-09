@@ -21,6 +21,8 @@
 		7A0117D6220ED7D800F02008 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117D5220ED7D800F02008 /* Photos.swift */; };
 		7A0117D8220EDA1200F02008 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117D7220EDA1200F02008 /* Response.swift */; };
 		7A0117DA220EDB9800F02008 /* PhotosRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117D9220EDB9800F02008 /* PhotosRequestManager.swift */; };
+		7A0117DD220EEB7300F02008 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117DC220EEB7300F02008 /* Groups.swift */; };
+		7A0117DF220EED9C00F02008 /* GroupsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117DE220EED9C00F02008 /* GroupsRequestManager.swift */; };
 		7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18BD9722085B67000C6417 /* AppConfig.swift */; };
 		7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */; };
 		7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */; };
@@ -65,6 +67,8 @@
 		7A0117D5220ED7D800F02008 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		7A0117D7220EDA1200F02008 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		7A0117D9220EDB9800F02008 /* PhotosRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRequestManager.swift; sourceTree = "<group>"; };
+		7A0117DC220EEB7300F02008 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		7A0117DE220EED9C00F02008 /* GroupsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsRequestManager.swift; sourceTree = "<group>"; };
 		7A18BD9722085B67000C6417 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
 		7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				7A0117D7220EDA1200F02008 /* Response.swift */,
 				7A0117B8220D82ED00F02008 /* Friends */,
 				7A0117D4220ED7BE00F02008 /* Photos */,
+				7A0117DB220EEB4900F02008 /* Groups */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -160,6 +165,15 @@
 				7A0117D9220EDB9800F02008 /* PhotosRequestManager.swift */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		7A0117DB220EEB4900F02008 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				7A0117DC220EEB7300F02008 /* Groups.swift */,
+				7A0117DE220EED9C00F02008 /* GroupsRequestManager.swift */,
+			);
+			path = Groups;
 			sourceTree = "<group>";
 		};
 		7A18BD93220858A5000C6417 /* Resources */ = {
@@ -488,12 +502,14 @@
 				7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
 				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
+				7A0117DF220EED9C00F02008 /* GroupsRequestManager.swift in Sources */,
 				7A0117D6220ED7D800F02008 /* Photos.swift in Sources */,
 				7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */,
 				7AAE112B2209913A005E82DE /* AppAssembler.swift in Sources */,
 				7AAE11322209ED7A005E82DE /* Result.swift in Sources */,
 				7AAE1105220872E4005E82DE /* AuthCoordinator.swift in Sources */,
 				7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */,
+				7A0117DD220EEB7300F02008 /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
