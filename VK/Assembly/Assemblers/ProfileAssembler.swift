@@ -10,14 +10,14 @@ import Swinject
 
 class ProfileAssembler: Assembly {
     func assemble(container: Container) {
-        container.register(FriendsRequestManager.self) { r in
-            return RequestFactoryHelper.makeFactory(RequestManager.self, resolver: r)
-        }
+//        container.register(FriendsRequestManager.self) { r in
+//            return RequestFactoryHelper.makeFactory(RequestManager.self, resolver: r)
+//        }
         
         container.register(ProfileInput.self) { r, output in
             return ProfilePresenter(
                 output: output,
-                requestManager: r.resolve(FriendsRequestManager.self),
+                requestManager: r.resolve(NetworkingService.self),
                 keychainStorage: r.resolve(KeyValueStorage.self))
         }
     }

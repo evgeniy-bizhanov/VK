@@ -13,6 +13,10 @@ class NetworkingAssembler: Assembly {
     
     func assemble(container: Container) {
         
+        container.register(NetworkingService.self) { r in
+            return RequestFactoryHelper.makeFactory(RequestManager.self, resolver: r)
+        }
+        
         container.register(SessionManager.self) { _ in
             return makeSessionManager()
         }.inObjectScope(.container)

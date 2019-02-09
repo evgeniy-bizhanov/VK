@@ -15,7 +15,7 @@ class ProfilePresenter: ProfileInput {
     // MARK: - Models
     // MARK: - Services
     
-    let requestManager: FriendsRequestManager?
+    let requestManager: NetworkingService?
     let keychainStorage: KeyValueStorage?
     
     
@@ -43,7 +43,7 @@ class ProfilePresenter: ProfileInput {
     
     // MARK: - Initializers
     
-    init(output: ProfileOutput?, requestManager: FriendsRequestManager?, keychainStorage: KeyValueStorage?) {
+    init(output: ProfileOutput?, requestManager: NetworkingService?, keychainStorage: KeyValueStorage?) {
         self.output = output
         self.requestManager = requestManager
         self.keychainStorage = keychainStorage
