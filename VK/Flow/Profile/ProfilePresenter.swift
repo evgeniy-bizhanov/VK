@@ -50,6 +50,10 @@ class ProfilePresenter: ProfileInput {
         (requestManager as? GroupsRequestManager)?.get(forUser: userId, count: 1, offset: 0) { response in
             print("\n-- GROUPS --\n \(response.value?.response.items)")
         }
+        
+        requestManager?.search(byQuery: "Music", count: 1, offset: 0) { response in
+            print("\n-- SEARCH BY 'MUSIC' RESULTS --\n \(response.value?.response.items)")
+        }
     }
     
     
