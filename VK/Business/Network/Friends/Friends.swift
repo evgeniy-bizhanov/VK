@@ -30,14 +30,3 @@ extension Friend {
         self.online = try container.decode(Int.self, forKey: .online)
     }
 }
-
-extension Friend {
-    struct Response: Decodable {
-        let response: Friends
-    }
-    
-    struct Friends: Decodable {
-        let count: Int
-        let items: [Friend]
-    }
-}

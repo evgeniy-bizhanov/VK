@@ -12,28 +12,30 @@ import Alamofire
 
 protocol FriendsRequestManager: AbstractRequestManager {
     
+    typealias Friends = Response<Friend>
+    
     /// Gets list of friends
     ///
     /// - Parameter userId: User identifier
-    func get(forUser userId: String, completion: @escaping Completion<Friend.Response>)
+    func get(forUser userId: String, completion: @escaping Completion<Friends>)
     
     /// Gets list of friends
     ///
     /// - Parameter userId: User identifier
     /// - Parameter count: Number of entries returned
     /// - Parameter offset: Return entries offset
-    func get(forUser userId: String, count: Int, offset: Int, completion: @escaping Completion<Friend.Response>)
+    func get(forUser userId: String, count: Int, offset: Int, completion: @escaping Completion<Friends>)
 }
 
 
 // MARK: - Implementation
 
 extension RequestManager: FriendsRequestManager {
-    func get(forUser userId: String, completion: @escaping Completion<Friend.Response>) {
+    func get(forUser userId: String, completion: @escaping Completion<Friends>) {
         get(forUser: userId, count: 50, offset: 0, completion: completion)
     }
     
-    func get(forUser userId: String, count: Int, offset: Int, completion: @escaping Completion<Friend.Response>) {
+    func get(forUser userId: String, count: Int, offset: Int, completion: @escaping Completion<Friends>) {
         
         let urlRequest = GetRequestRouter(
             url: url,

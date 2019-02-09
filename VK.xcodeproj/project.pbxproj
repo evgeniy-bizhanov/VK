@@ -18,6 +18,8 @@
 		7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117C7220DA5B300F02008 /* RequestFactoryHelper.swift */; };
 		7A0117CB220DA79F00F02008 /* NetworkingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117CA220DA79F00F02008 /* NetworkingAssembler.swift */; };
 		7A0117CD220DAAE900F02008 /* ProfileModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117CC220DAAE900F02008 /* ProfileModuleBuilder.swift */; };
+		7A0117D6220ED7D800F02008 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117D5220ED7D800F02008 /* Photos.swift */; };
+		7A0117D8220EDA1200F02008 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117D7220EDA1200F02008 /* Response.swift */; };
 		7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18BD9722085B67000C6417 /* AppConfig.swift */; };
 		7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */; };
 		7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */; };
@@ -59,6 +61,8 @@
 		7A0117C7220DA5B300F02008 /* RequestFactoryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactoryHelper.swift; sourceTree = "<group>"; };
 		7A0117CA220DA79F00F02008 /* NetworkingAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAssembler.swift; sourceTree = "<group>"; };
 		7A0117CC220DAAE900F02008 /* ProfileModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleBuilder.swift; sourceTree = "<group>"; };
+		7A0117D5220ED7D800F02008 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		7A0117D7220EDA1200F02008 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		7A18BD9722085B67000C6417 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
 		7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
@@ -123,7 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				7A0117B5220C994500F02008 /* RequestManager.swift */,
+				7A0117D7220EDA1200F02008 /* Response.swift */,
 				7A0117B8220D82ED00F02008 /* Friends */,
+				7A0117D4220ED7BE00F02008 /* Photos */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -143,6 +149,14 @@
 				7A0117C7220DA5B300F02008 /* RequestFactoryHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		7A0117D4220ED7BE00F02008 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				7A0117D5220ED7D800F02008 /* Photos.swift */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 		7A18BD93220858A5000C6417 /* Resources */ = {
@@ -462,6 +476,7 @@
 				7A0117BC220D850800F02008 /* Friends.swift in Sources */,
 				7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */,
 				7A0117CD220DAAE900F02008 /* ProfileModuleBuilder.swift in Sources */,
+				7A0117D8220EDA1200F02008 /* Response.swift in Sources */,
 				7A0117B7220C994500F02008 /* RequestManager.swift in Sources */,
 				7AAE111022088EB0005E82DE /* Identifable.swift in Sources */,
 				7AAE111922096324005E82DE /* RequestRouter.swift in Sources */,
@@ -469,6 +484,7 @@
 				7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
 				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
+				7A0117D6220ED7D800F02008 /* Photos.swift in Sources */,
 				7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */,
 				7AAE112B2209913A005E82DE /* AppAssembler.swift in Sources */,
 				7AAE11322209ED7A005E82DE /* Result.swift in Sources */,
