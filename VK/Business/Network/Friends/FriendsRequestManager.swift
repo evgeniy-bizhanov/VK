@@ -19,7 +19,7 @@ protocol FriendsRequestManager: AbstractRequestManager {
     /// - Parameter userId: User identifier
     func get(forUser userId: String, completion: @escaping Completion<Friends>)
     
-    /// Gets list of friends
+    /// Gets specified numbers of friends
     ///
     /// - Parameter userId: User identifier
     /// - Parameter count: Number of entries returned

@@ -33,10 +33,19 @@ class ProfilePresenter: ProfileInput {
     
     func didLoad() {
         
-        if let userId = userId {
-            requestManager?.get(forUser: userId) { response in
-                print(response.value?.response.items)
-            }
+        guard let userId = userId else {
+            fatalError("User id can't be null")
+        }
+        
+        requestManager?.get(forUser: userId, count: 1, offset: 0) { response in
+            print("-- FRIENDS --")
+            print(response.value?.response.items)
+        }
+        
+        requestManager?.get(forUser: userId, albumId: .profile, count: 1, offset: 0) { response in
+            print()
+            print("-- PHOTOS --")
+            print(response.value?.response.items)
         }
     }
     
