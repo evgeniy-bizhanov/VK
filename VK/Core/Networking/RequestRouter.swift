@@ -18,6 +18,7 @@ protocol RequestRouter: URLRequestConvertible {
     var httpMethod: HTTPMethod { get }
     var encoding: RequestRouterEncoding { get }
     var apiMethod: String { get }
+    var token: String? { get }
     
     var parameters: Parameters? { get }
 }
@@ -40,7 +41,7 @@ extension RequestRouter {
             fatalError("Invalid url")
         }
         
-        urlComponents.path = apiMethod
+        urlComponents.path += apiMethod
         
         var urlRequest = URLRequest(url: try urlComponents.asURL())
         urlRequest.httpMethod = httpMethod.rawValue

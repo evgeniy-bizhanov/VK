@@ -14,8 +14,10 @@ class RequestManager: AbstractRequestManager {
     
     let sessionManager: SessionManager
     let queue: DispatchQueue?
+    let keychainStorage: KeyValueStorage?
 
     let url: URL! = URL(string: AppConfig.Api.url)
+    lazy var token: String? = { keychainStorage?.string(forKey: "token") }()
 
     
     // MARK: - Functions
@@ -24,10 +26,12 @@ class RequestManager: AbstractRequestManager {
     
     required init(
         sessionManager: SessionManager,
-        queue: DispatchQueue?) {
+        queue: DispatchQueue?,
+        keychainStorage: KeyValueStorage?) {
         
         self.sessionManager = sessionManager
         self.queue = queue
+        self.keychainStorage = keychainStorage
     }
     
     

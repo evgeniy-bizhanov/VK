@@ -33,6 +33,10 @@ extension Friend {
 
 extension Friend {
     struct Response: Decodable {
+        let response: ResponseFriends
+    }
+    
+    struct ResponseFriends: Decodable {
         let count: Int
         let items: [Friend]
     }

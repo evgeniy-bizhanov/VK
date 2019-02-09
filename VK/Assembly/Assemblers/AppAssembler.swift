@@ -27,5 +27,9 @@ class AppAssembler: Assembly {
                 coordinator: r.resolve(AbstractCoordinator.self)
             )
         }
+        
+        container.register(DispatchQueue.self) { _ in
+            DispatchQueue.global(qos: .userInteractive)
+        }
     }
 }

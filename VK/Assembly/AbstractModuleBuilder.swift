@@ -12,7 +12,9 @@ import Swinject
 fileprivate let assembler = Assembler(
     [
         AppAssembler(),
-        AuthAssembler()
+        NetworkingAssembler(),
+        AuthAssembler(),
+        ProfileAssembler()
     ]
 )
 

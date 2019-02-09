@@ -13,7 +13,7 @@ protocol AbstractRequestManager {
     @discardableResult
     func request<T>(request: URLRequestConvertible, completion: @escaping Completion<T>) -> DataRequest
     
-    init(sessionManager: SessionManager, queue: DispatchQueue?)
+    init(sessionManager: SessionManager, queue: DispatchQueue?, keychainStorage: KeyValueStorage?)
 }
 
 extension AbstractRequestManager {

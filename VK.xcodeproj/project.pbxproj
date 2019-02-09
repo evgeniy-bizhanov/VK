@@ -11,9 +11,13 @@
 		7A0117B0220C940400F02008 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117AF220C940400F02008 /* ResponseCodable.swift */; };
 		7A0117B2220C976200F02008 /* AbstractRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117B1220C976200F02008 /* AbstractRequestManager.swift */; };
 		7A0117B7220C994500F02008 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117B5220C994500F02008 /* RequestManager.swift */; };
-		7A0117BA220D831900F02008 /* FriendsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117B9220D831900F02008 /* FriendsRequest.swift */; };
 		7A0117BC220D850800F02008 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117BB220D850800F02008 /* Friends.swift */; };
 		7A0117BE220D87DC00F02008 /* FriendsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117BD220D87DC00F02008 /* FriendsRequestManager.swift */; };
+		7A0117C4220D9E9800F02008 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117C3220D9E9800F02008 /* ProfilePresenter.swift */; };
+		7A0117C6220DA4A600F02008 /* ProfileAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117C5220DA4A600F02008 /* ProfileAssembler.swift */; };
+		7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117C7220DA5B300F02008 /* RequestFactoryHelper.swift */; };
+		7A0117CB220DA79F00F02008 /* NetworkingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117CA220DA79F00F02008 /* NetworkingAssembler.swift */; };
+		7A0117CD220DAAE900F02008 /* ProfileModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117CC220DAAE900F02008 /* ProfileModuleBuilder.swift */; };
 		7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18BD9722085B67000C6417 /* AppConfig.swift */; };
 		7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */; };
 		7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */; };
@@ -48,9 +52,13 @@
 		7A0117AF220C940400F02008 /* ResponseCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
 		7A0117B1220C976200F02008 /* AbstractRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractRequestManager.swift; sourceTree = "<group>"; };
 		7A0117B5220C994500F02008 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
-		7A0117B9220D831900F02008 /* FriendsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequest.swift; sourceTree = "<group>"; };
 		7A0117BB220D850800F02008 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		7A0117BD220D87DC00F02008 /* FriendsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequestManager.swift; sourceTree = "<group>"; };
+		7A0117C3220D9E9800F02008 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		7A0117C5220DA4A600F02008 /* ProfileAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembler.swift; sourceTree = "<group>"; };
+		7A0117C7220DA5B300F02008 /* RequestFactoryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactoryHelper.swift; sourceTree = "<group>"; };
+		7A0117CA220DA79F00F02008 /* NetworkingAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAssembler.swift; sourceTree = "<group>"; };
+		7A0117CC220DAAE900F02008 /* ProfileModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleBuilder.swift; sourceTree = "<group>"; };
 		7A18BD9722085B67000C6417 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
 		7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
@@ -124,10 +132,17 @@
 			isa = PBXGroup;
 			children = (
 				7A0117BB220D850800F02008 /* Friends.swift */,
-				7A0117B9220D831900F02008 /* FriendsRequest.swift */,
 				7A0117BD220D87DC00F02008 /* FriendsRequestManager.swift */,
 			);
 			path = Friends;
+			sourceTree = "<group>";
+		};
+		7A0117C9220DA5B800F02008 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7A0117C7220DA5B300F02008 /* RequestFactoryHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		7A18BD93220858A5000C6417 /* Resources */ = {
@@ -163,6 +178,7 @@
 		7A18BD9622085972000C6417 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7A0117C9220DA5B800F02008 /* Helper */,
 				7AAE110F22088EB0005E82DE /* Identifable.swift */,
 				7AAE110C22088E5B005E82DE /* Extensions */,
 				7AAE10FA22086F33005E82DE /* Navigation */,
@@ -242,7 +258,9 @@
 			isa = PBXGroup;
 			children = (
 				7AAE112A2209913A005E82DE /* AppAssembler.swift */,
+				7A0117CA220DA79F00F02008 /* NetworkingAssembler.swift */,
 				7AAE1125220987E0005E82DE /* AuthAssembler.swift */,
+				7A0117C5220DA4A600F02008 /* ProfileAssembler.swift */,
 			);
 			path = Assemblers;
 			sourceTree = "<group>";
@@ -260,8 +278,10 @@
 			isa = PBXGroup;
 			children = (
 				7AAE11342209F108005E82DE /* Profile.storyboard */,
-				7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */,
+				7A0117CC220DAAE900F02008 /* ProfileModuleBuilder.swift */,
 				7AAE11362209F15F005E82DE /* ProfileViewController.swift */,
+				7A0117C3220D9E9800F02008 /* ProfilePresenter.swift */,
+				7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -430,9 +450,10 @@
 				7A0117BE220D87DC00F02008 /* FriendsRequestManager.swift in Sources */,
 				7AAE112D220994D2005E82DE /* AppBuilder.swift in Sources */,
 				7AAE110B22088C86005E82DE /* AuthViewController.swift in Sources */,
+				7A0117CB220DA79F00F02008 /* NetworkingAssembler.swift in Sources */,
 				7A0117B2220C976200F02008 /* AbstractRequestManager.swift in Sources */,
-				7A0117BA220D831900F02008 /* FriendsRequest.swift in Sources */,
 				7AAE11372209F15F005E82DE /* ProfileViewController.swift in Sources */,
+				7A0117C6220DA4A600F02008 /* ProfileAssembler.swift in Sources */,
 				7AAE111222088EDC005E82DE /* UIViewController.swift in Sources */,
 				7AAE1126220987E0005E82DE /* AuthAssembler.swift in Sources */,
 				7AAE111422095A06005E82DE /* AuthPresenter.swift in Sources */,
@@ -440,9 +461,12 @@
 				7AAE1129220989CC005E82DE /* AuthModuleBuilder.swift in Sources */,
 				7A0117BC220D850800F02008 /* Friends.swift in Sources */,
 				7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */,
+				7A0117CD220DAAE900F02008 /* ProfileModuleBuilder.swift in Sources */,
 				7A0117B7220C994500F02008 /* RequestManager.swift in Sources */,
 				7AAE111022088EB0005E82DE /* Identifable.swift in Sources */,
 				7AAE111922096324005E82DE /* RequestRouter.swift in Sources */,
+				7A0117C4220D9E9800F02008 /* ProfilePresenter.swift in Sources */,
+				7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
 				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
 				7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */,
