@@ -46,6 +46,9 @@
 		7AAE11322209ED7A005E82DE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11312209ED7A005E82DE /* Result.swift */; };
 		7AAE11352209F108005E82DE /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AAE11342209F108005E82DE /* Profile.storyboard */; };
 		7AAE11372209F15F005E82DE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11362209F15F005E82DE /* ProfileViewController.swift */; };
+		7AE3CBE82211BD8F008EC751 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBE72211BD8F008EC751 /* Friends.storyboard */; };
+		7AE3CBEB2211BDA3008EC751 /* Communities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBEA2211BDA3008EC751 /* Communities.storyboard */; };
+		7AE3CBED2211BDB0008EC751 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBEC2211BDB0008EC751 /* Photos.storyboard */; };
 		7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF867402208150E007B7A8F /* AppDelegate.swift */; };
 		7AF867482208150F007B7A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867472208150F007B7A8F /* Assets.xcassets */; };
 		7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867492208150F007B7A8F /* LaunchScreen.storyboard */; };
@@ -92,6 +95,9 @@
 		7AAE11312209ED7A005E82DE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7AAE11342209F108005E82DE /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7AAE11362209F15F005E82DE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7AE3CBE72211BD8F008EC751 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		7AE3CBEA2211BDA3008EC751 /* Communities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Communities.storyboard; sourceTree = "<group>"; };
+		7AE3CBEC2211BDB0008EC751 /* Photos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
 		7AF8673D2208150E007B7A8F /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF867402208150E007B7A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AF867472208150F007B7A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +208,9 @@
 			children = (
 				7AAE110722088C2B005E82DE /* Auth */,
 				7AAE11332209F0C5005E82DE /* Profile */,
+				7AE3CBE42211BD39008EC751 /* Friends */,
+				7AE3CBE52211BD49008EC751 /* Communities */,
+				7AE3CBE62211BD79008EC751 /* Photos */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -317,6 +326,30 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		7AE3CBE42211BD39008EC751 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3CBE72211BD8F008EC751 /* Friends.storyboard */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		7AE3CBE52211BD49008EC751 /* Communities */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3CBEA2211BDA3008EC751 /* Communities.storyboard */,
+			);
+			path = Communities;
+			sourceTree = "<group>";
+		};
+		7AE3CBE62211BD79008EC751 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				7AE3CBEC2211BDB0008EC751 /* Photos.storyboard */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		7AF867342208150E007B7A8F = {
 			isa = PBXGroup;
 			children = (
@@ -408,7 +441,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE3CBED2211BDB0008EC751 /* Photos.storyboard in Resources */,
 				7AAE110922088C47005E82DE /* Auth.storyboard in Resources */,
+				7AE3CBE82211BD8F008EC751 /* Friends.storyboard in Resources */,
+				7AE3CBEB2211BDA3008EC751 /* Communities.storyboard in Resources */,
 				7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */,
 				7AAE11352209F108005E82DE /* Profile.storyboard in Resources */,
 				7AF867482208150F007B7A8F /* Assets.xcassets in Resources */,
