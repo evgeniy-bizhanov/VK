@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--View Controller-->
         <scene sceneID="PwS-Qv-ZpU">
             <objects>
                 <viewController id="7Pk-rH-kVN" customClass="ProfileViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,6 +46,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sam-Wy-FSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="KFn-kk-8QL" customClass="ProfileModuleBuilder" customModule="VK" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="7Pk-rH-kVN" id="FBY-pQ-2Fh"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="108" y="151"/>
         </scene>

@@ -10,8 +10,7 @@ import Foundation
 
 protocol AuthInput {
     func didLoad()
-    func retrieveToken(fromUrl url: URL) -> Result<String>
-    func retrieved(token: String)
+    func retrieved(token: String?, forUser userId: String?)
 }
 
 class AuthPresenter: AuthInput {
@@ -36,19 +35,13 @@ class AuthPresenter: AuthInput {
         }
     }
     
-    func retrieveToken(fromUrl url: URL) -> Result<String> {
-        guard
-            let fragment = url.fragment,
-            fragment.range(of: "access_token") != nil,
-            let token = fragment.components(separatedBy: "access_token=").last else {
-                return .error("В переданном url токен не найден")
+    func retrieved(token: String?, forUser userId: String?) {
+        guard let token = token, let userId = userId else {
+            fatalError("Token or user id is nil")
         }
         
-        return .success(token)
-    }
-    
-    func retrieved(token: String) {
         storage?.set(value: token, forKey: "token")
+        storage?.set(value: userId, forKey: "userId")
     }
     
     
@@ -69,11 +62,12 @@ fileprivate extension AppConfig.Authentication {
         
         components.queryItems = [
             URLQueryItem(name: "client_id", value: AppConfig.Authentication.id),
-            URLQueryItem(name: "redirect_uri", value: ""),
-            URLQueryItem(name: "scope", value: "friends"),
+            URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
+            URLQueryItem(name: "display", value: "mobile"),
+            URLQueryItem(name: "scope", value: "offline, friends, photos, messages, wall, groups, notifications"),
             URLQueryItem(name: "response_type", value: "token"),
-            URLQueryItem(name: "v", value: AppConfig.Api.version),
-            URLQueryItem(name: "display", value: "mobile")
+            URLQueryItem(name: "state", value: "success"),
+            URLQueryItem(name: "v", value: AppConfig.Api.version)
         ]
         
         if let url = components.url {

@@ -7,8 +7,8 @@ target 'VK' do
 
   # Pods for VK
 
-  pod 'Alamofire'
-  pod 'Swinject'
+  pod 'Alamofire', '~> 4.8'
+  pod 'Swinject', '~> 2.5'
   pod 'KeychainAccess', '~> 3.1'
 
 end

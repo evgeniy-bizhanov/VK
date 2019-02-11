@@ -9,12 +9,17 @@
 /// Supply type identifier based on its name
 protocol Identifiable {
     static var identifier: String { get }
+    var identifier: String { get }
 }
 
 extension Identifiable {
     
     /// Type identifier
     static var identifier: String {
+        return String(describing: self)
+    }
+    
+    var identifier: String {
         return String(describing: self)
     }
 }

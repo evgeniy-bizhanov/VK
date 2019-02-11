@@ -8,12 +8,33 @@
 
 import UIKit
 
+protocol ProfileOutput {}
+
 class ProfileViewController: UIViewController {
+    
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var token: UILabel!
+    
+    
+    // MARK: - Models
+    // MARK: - Services
+    // MARK: - Properties
+    
+    var input: ProfileInput?
+    
+    
+    // MARK: - Fields
+    // MARK: - IBActions
+    // MARK: - Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        token.text = Singleton.shared.token
+        input?.didLoad()
     }
+    
+    
+    // MARK: - Initializers
 }
+
+extension ProfileViewController: ProfileOutput {}
