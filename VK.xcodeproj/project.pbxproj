@@ -49,6 +49,7 @@
 		7AE3CBE82211BD8F008EC751 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBE72211BD8F008EC751 /* Friends.storyboard */; };
 		7AE3CBEB2211BDA3008EC751 /* Communities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBEA2211BDA3008EC751 /* Communities.storyboard */; };
 		7AE3CBED2211BDB0008EC751 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBEC2211BDB0008EC751 /* Photos.storyboard */; };
+		7AE3CBEF22127AF0008EC751 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3CBEE22127AF0008EC751 /* Mappable.swift */; };
 		7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF867402208150E007B7A8F /* AppDelegate.swift */; };
 		7AF867482208150F007B7A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867472208150F007B7A8F /* Assets.xcassets */; };
 		7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867492208150F007B7A8F /* LaunchScreen.storyboard */; };
@@ -98,6 +99,7 @@
 		7AE3CBE72211BD8F008EC751 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		7AE3CBEA2211BDA3008EC751 /* Communities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Communities.storyboard; sourceTree = "<group>"; };
 		7AE3CBEC2211BDB0008EC751 /* Photos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
+		7AE3CBEE22127AF0008EC751 /* Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
 		7AF8673D2208150E007B7A8F /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF867402208150E007B7A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AF867472208150F007B7A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -218,12 +220,13 @@
 		7A18BD9622085972000C6417 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				7A0117C9220DA5B800F02008 /* Helper */,
+				7AE3CBEE22127AF0008EC751 /* Mappable.swift */,
 				7AAE110F22088EB0005E82DE /* Identifable.swift */,
+				7AAE11312209ED7A005E82DE /* Result.swift */,
+				7A0117C9220DA5B800F02008 /* Helper */,
 				7AAE110C22088E5B005E82DE /* Extensions */,
 				7AAE10FA22086F33005E82DE /* Navigation */,
 				7AAE1117220962E3005E82DE /* Networking */,
-				7AAE11312209ED7A005E82DE /* Result.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
 				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
+				7AE3CBEF22127AF0008EC751 /* Mappable.swift in Sources */,
 				7A0117DF220EED9C00F02008 /* GroupsRequestManager.swift in Sources */,
 				7A0117D6220ED7D800F02008 /* Photos.swift in Sources */,
 				7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */,
