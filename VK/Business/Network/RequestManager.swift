@@ -8,10 +8,7 @@
 
 import Alamofire
 
-// FIXME: - Remove after creating each view
-typealias NetworkingService = FriendsRequestManager & PhotosRequestManager & GroupsRequestManager
-
-class RequestManager: AbstractRequestManager {
+final class RequestManager: AbstractRequestManager {
     
     // MARK: - Properties
     

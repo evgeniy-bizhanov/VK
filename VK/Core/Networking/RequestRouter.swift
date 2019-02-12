@@ -18,7 +18,7 @@ protocol RequestRouter: URLRequestConvertible {
     var httpMethod: HTTPMethod { get }
     var encoding: RequestRouterEncoding { get }
     var apiMethod: String { get }
-    var token: String? { get }
+    var token: String { get }
     
     var parameters: Parameters? { get }
 }

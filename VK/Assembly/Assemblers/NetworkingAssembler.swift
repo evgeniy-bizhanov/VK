@@ -13,9 +13,9 @@ class NetworkingAssembler: Assembly {
     
     func assemble(container: Container) {
         
-        container.register(NetworkingService.self) { r in
+        container.register(AbstractRequestManager.self) { r in
             return RequestFactoryHelper.makeFactory(RequestManager.self, resolver: r)
-        }
+        }.inObjectScope(.container)
         
         container.register(SessionManager.self) { _ in
             return makeSessionManager()

@@ -10,43 +10,58 @@ import Alamofire
 
 // MARK: - Protocol
 
-protocol FriendsRequestManager: AbstractRequestManager {
+protocol FriendsRequestable {
     
     typealias Friends = Response<Friend>
+    typealias Completion<T: Decodable> = (T) -> Void
     
     /// Gets list of friends
     ///
     /// - Parameter userId: User identifier
-    func get(forUser userId: String, completion: @escaping Completion<Friends>)
+    func get<T>(forUser userId: String, completion: Completion<T>?)
     
     /// Gets specified numbers of friends
     ///
     /// - Parameter userId: User identifier
     /// - Parameter count: Number of entries returned
     /// - Parameter offset: Return entries offset
-    func get(forUser userId: String, count: Int, offset: Int, completion: @escaping Completion<Friends>)
+    func get<T>(forUser userId: String, count: Int, offset: Int, completion: Completion<T>?)
 }
 
 
 // MARK: - Implementation
 
-extension RequestManager: FriendsRequestManager {
-    func get(forUser userId: String, completion: @escaping Completion<Friends>) {
+final class FriendsRequestManager: FriendsRequestable {
+    
+    var requestManager: AbstractRequestManager!
+    
+    func get<T>(forUser userId: String, completion: Completion<T>?) {
         get(forUser: userId, count: 50, offset: 0, completion: completion)
     }
     
-    func get(forUser userId: String, count: Int, offset: Int, completion: @escaping Completion<Friends>) {
+    func get<T>(forUser userId: String, count: Int, offset: Int, completion: Completion<T>?) {
         
         let urlRequest = GetRequestRouter(
-            url: url,
+            url: requestManager.url,
             userId: userId,
             count: count,
             offset: offset,
             fields: "online",
-            token: token
+            token: requestManager.token ?? ""
         )
         
-        self.request(request: urlRequest, completion: completion)
+        requestManager.request(request: urlRequest) { (data: Friends) in
+            
+            guard let data = try? data.response.items.mapDto(to: T.self) else {
+                preconditionFailure("Failure: Cant map \(T.self)")
+            }
+            
+            completion?(data)
+        }
+    }
+    
+    init(requestManager: AbstractRequestManager?) {
+        self.requestManager = requestManager
     }
 }
 
@@ -63,7 +78,7 @@ fileprivate struct GetRequestRouter: RequestRouter {
     let count: Int
     let offset: Int
     let fields: String
-    let token: String?
+    let token: String
     
     var parameters: Parameters? {
         return [
@@ -72,7 +87,7 @@ fileprivate struct GetRequestRouter: RequestRouter {
             "offset": offset,
             "fields": fields,
             "v": AppConfig.Api.version,
-            "access_token": token ?? ""
+            "access_token": token
         ]
     }
 }

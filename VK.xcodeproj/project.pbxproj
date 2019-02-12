@@ -12,18 +12,20 @@
 		7A0117B2220C976200F02008 /* AbstractRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117B1220C976200F02008 /* AbstractRequestManager.swift */; };
 		7A0117B7220C994500F02008 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117B5220C994500F02008 /* RequestManager.swift */; };
 		7A0117BC220D850800F02008 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117BB220D850800F02008 /* Friends.swift */; };
-		7A0117BE220D87DC00F02008 /* FriendsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117BD220D87DC00F02008 /* FriendsRequestManager.swift */; };
+		7A0117BE220D87DC00F02008 /* FriendsRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117BD220D87DC00F02008 /* FriendsRequestable.swift */; };
 		7A0117C4220D9E9800F02008 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117C3220D9E9800F02008 /* ProfilePresenter.swift */; };
-		7A0117C6220DA4A600F02008 /* ProfileAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117C5220DA4A600F02008 /* ProfileAssembler.swift */; };
 		7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117C7220DA5B300F02008 /* RequestFactoryHelper.swift */; };
 		7A0117CB220DA79F00F02008 /* NetworkingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117CA220DA79F00F02008 /* NetworkingAssembler.swift */; };
 		7A0117CD220DAAE900F02008 /* ProfileModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117CC220DAAE900F02008 /* ProfileModuleBuilder.swift */; };
 		7A0117D6220ED7D800F02008 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117D5220ED7D800F02008 /* Photos.swift */; };
 		7A0117D8220EDA1200F02008 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117D7220EDA1200F02008 /* Response.swift */; };
-		7A0117DA220EDB9800F02008 /* PhotosRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117D9220EDB9800F02008 /* PhotosRequestManager.swift */; };
-		7A0117DD220EEB7300F02008 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117DC220EEB7300F02008 /* Groups.swift */; };
-		7A0117DF220EED9C00F02008 /* GroupsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117DE220EED9C00F02008 /* GroupsRequestManager.swift */; };
+		7A0117DA220EDB9800F02008 /* PhotosRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117D9220EDB9800F02008 /* PhotosRequestable.swift */; };
+		7A0117DD220EEB7300F02008 /* Communities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117DC220EEB7300F02008 /* Communities.swift */; };
+		7A0117DF220EED9C00F02008 /* CommunitiesRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117DE220EED9C00F02008 /* CommunitiesRequestable.swift */; };
 		7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18BD9722085B67000C6417 /* AppConfig.swift */; };
+		7A637C662212B22B0071F399 /* FriendsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C652212B22B0071F399 /* FriendsAssembler.swift */; };
+		7A637C6A2212B2720071F399 /* CommunitiesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C692212B2720071F399 /* CommunitiesAssembler.swift */; };
+		7A637C6C2212B27F0071F399 /* PhotosAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C6B2212B27F0071F399 /* PhotosAssembler.swift */; };
 		7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */; };
 		7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */; };
 		7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11022208706B005E82DE /* AppCoordinator.swift */; };
@@ -50,6 +52,8 @@
 		7AE3CBEB2211BDA3008EC751 /* Communities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBEA2211BDA3008EC751 /* Communities.storyboard */; };
 		7AE3CBED2211BDB0008EC751 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBEC2211BDB0008EC751 /* Photos.storyboard */; };
 		7AE3CBEF22127AF0008EC751 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3CBEE22127AF0008EC751 /* Mappable.swift */; };
+		7AE3CBF122127C9A008EC751 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3CBF022127C9A008EC751 /* Friend.swift */; };
+		7AE3CBF32212856F008EC751 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3CBF22212856F008EC751 /* Foundation.swift */; };
 		7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF867402208150E007B7A8F /* AppDelegate.swift */; };
 		7AF867482208150F007B7A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867472208150F007B7A8F /* Assets.xcassets */; };
 		7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AF867492208150F007B7A8F /* LaunchScreen.storyboard */; };
@@ -62,18 +66,20 @@
 		7A0117B1220C976200F02008 /* AbstractRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractRequestManager.swift; sourceTree = "<group>"; };
 		7A0117B5220C994500F02008 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		7A0117BB220D850800F02008 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
-		7A0117BD220D87DC00F02008 /* FriendsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequestManager.swift; sourceTree = "<group>"; };
+		7A0117BD220D87DC00F02008 /* FriendsRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequestable.swift; sourceTree = "<group>"; };
 		7A0117C3220D9E9800F02008 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		7A0117C5220DA4A600F02008 /* ProfileAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembler.swift; sourceTree = "<group>"; };
 		7A0117C7220DA5B300F02008 /* RequestFactoryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactoryHelper.swift; sourceTree = "<group>"; };
 		7A0117CA220DA79F00F02008 /* NetworkingAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAssembler.swift; sourceTree = "<group>"; };
 		7A0117CC220DAAE900F02008 /* ProfileModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleBuilder.swift; sourceTree = "<group>"; };
 		7A0117D5220ED7D800F02008 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		7A0117D7220EDA1200F02008 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		7A0117D9220EDB9800F02008 /* PhotosRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRequestManager.swift; sourceTree = "<group>"; };
-		7A0117DC220EEB7300F02008 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
-		7A0117DE220EED9C00F02008 /* GroupsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsRequestManager.swift; sourceTree = "<group>"; };
+		7A0117D9220EDB9800F02008 /* PhotosRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRequestable.swift; sourceTree = "<group>"; };
+		7A0117DC220EEB7300F02008 /* Communities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communities.swift; sourceTree = "<group>"; };
+		7A0117DE220EED9C00F02008 /* CommunitiesRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesRequestable.swift; sourceTree = "<group>"; };
 		7A18BD9722085B67000C6417 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		7A637C652212B22B0071F399 /* FriendsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAssembler.swift; sourceTree = "<group>"; };
+		7A637C692212B2720071F399 /* CommunitiesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesAssembler.swift; sourceTree = "<group>"; };
+		7A637C6B2212B27F0071F399 /* PhotosAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAssembler.swift; sourceTree = "<group>"; };
 		7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
 		7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		7AAE11022208706B005E82DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -100,6 +106,8 @@
 		7AE3CBEA2211BDA3008EC751 /* Communities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Communities.storyboard; sourceTree = "<group>"; };
 		7AE3CBEC2211BDB0008EC751 /* Photos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
 		7AE3CBEE22127AF0008EC751 /* Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
+		7AE3CBF022127C9A008EC751 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		7AE3CBF22212856F008EC751 /* Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
 		7AF8673D2208150E007B7A8F /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF867402208150E007B7A8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AF867472208150F007B7A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,7 +152,7 @@
 				7A0117D7220EDA1200F02008 /* Response.swift */,
 				7A0117B8220D82ED00F02008 /* Friends */,
 				7A0117D4220ED7BE00F02008 /* Photos */,
-				7A0117DB220EEB4900F02008 /* Groups */,
+				7A0117DB220EEB4900F02008 /* Communities */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -153,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				7A0117BB220D850800F02008 /* Friends.swift */,
-				7A0117BD220D87DC00F02008 /* FriendsRequestManager.swift */,
+				7A0117BD220D87DC00F02008 /* FriendsRequestable.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -170,18 +178,18 @@
 			isa = PBXGroup;
 			children = (
 				7A0117D5220ED7D800F02008 /* Photos.swift */,
-				7A0117D9220EDB9800F02008 /* PhotosRequestManager.swift */,
+				7A0117D9220EDB9800F02008 /* PhotosRequestable.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
 		};
-		7A0117DB220EEB4900F02008 /* Groups */ = {
+		7A0117DB220EEB4900F02008 /* Communities */ = {
 			isa = PBXGroup;
 			children = (
-				7A0117DC220EEB7300F02008 /* Groups.swift */,
-				7A0117DE220EED9C00F02008 /* GroupsRequestManager.swift */,
+				7A0117DC220EEB7300F02008 /* Communities.swift */,
+				7A0117DE220EED9C00F02008 /* CommunitiesRequestable.swift */,
 			);
-			path = Groups;
+			path = Communities;
 			sourceTree = "<group>";
 		};
 		7A18BD93220858A5000C6417 /* Resources */ = {
@@ -256,6 +264,7 @@
 			children = (
 				7AAE110D22088E6F005E82DE /* UIStoryboard.swift */,
 				7AAE111122088EDC005E82DE /* UIViewController.swift */,
+				7AE3CBF22212856F008EC751 /* Foundation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,7 +312,9 @@
 				7AAE112A2209913A005E82DE /* AppAssembler.swift */,
 				7A0117CA220DA79F00F02008 /* NetworkingAssembler.swift */,
 				7AAE1125220987E0005E82DE /* AuthAssembler.swift */,
-				7A0117C5220DA4A600F02008 /* ProfileAssembler.swift */,
+				7A637C652212B22B0071F399 /* FriendsAssembler.swift */,
+				7A637C692212B2720071F399 /* CommunitiesAssembler.swift */,
+				7A637C6B2212B27F0071F399 /* PhotosAssembler.swift */,
 			);
 			path = Assemblers;
 			sourceTree = "<group>";
@@ -332,6 +343,7 @@
 		7AE3CBE42211BD39008EC751 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				7AE3CBF022127C9A008EC751 /* Friend.swift */,
 				7AE3CBE72211BD8F008EC751 /* Friends.storyboard */,
 			);
 			path = Friends;
@@ -517,39 +529,43 @@
 				7A0117B0220C940400F02008 /* ResponseCodable.swift in Sources */,
 				7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */,
 				7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */,
-				7A0117BE220D87DC00F02008 /* FriendsRequestManager.swift in Sources */,
+				7A0117BE220D87DC00F02008 /* FriendsRequestable.swift in Sources */,
 				7AAE112D220994D2005E82DE /* AppBuilder.swift in Sources */,
 				7AAE110B22088C86005E82DE /* AuthViewController.swift in Sources */,
 				7A0117CB220DA79F00F02008 /* NetworkingAssembler.swift in Sources */,
 				7A0117B2220C976200F02008 /* AbstractRequestManager.swift in Sources */,
 				7AAE11372209F15F005E82DE /* ProfileViewController.swift in Sources */,
-				7A0117C6220DA4A600F02008 /* ProfileAssembler.swift in Sources */,
 				7AAE111222088EDC005E82DE /* UIViewController.swift in Sources */,
 				7AAE1126220987E0005E82DE /* AuthAssembler.swift in Sources */,
 				7AAE111422095A06005E82DE /* AuthPresenter.swift in Sources */,
 				7AAE112222098784005E82DE /* AbstractModuleBuilder.swift in Sources */,
 				7AAE1129220989CC005E82DE /* AuthModuleBuilder.swift in Sources */,
 				7A0117BC220D850800F02008 /* Friends.swift in Sources */,
+				7AE3CBF32212856F008EC751 /* Foundation.swift in Sources */,
 				7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */,
+				7A637C6C2212B27F0071F399 /* PhotosAssembler.swift in Sources */,
 				7A0117CD220DAAE900F02008 /* ProfileModuleBuilder.swift in Sources */,
 				7A0117D8220EDA1200F02008 /* Response.swift in Sources */,
 				7A0117B7220C994500F02008 /* RequestManager.swift in Sources */,
 				7AAE111022088EB0005E82DE /* Identifable.swift in Sources */,
 				7AAE111922096324005E82DE /* RequestRouter.swift in Sources */,
-				7A0117DA220EDB9800F02008 /* PhotosRequestManager.swift in Sources */,
+				7AE3CBF122127C9A008EC751 /* Friend.swift in Sources */,
+				7A0117DA220EDB9800F02008 /* PhotosRequestable.swift in Sources */,
+				7A637C662212B22B0071F399 /* FriendsAssembler.swift in Sources */,
 				7A0117C4220D9E9800F02008 /* ProfilePresenter.swift in Sources */,
 				7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
 				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
 				7AE3CBEF22127AF0008EC751 /* Mappable.swift in Sources */,
-				7A0117DF220EED9C00F02008 /* GroupsRequestManager.swift in Sources */,
+				7A637C6A2212B2720071F399 /* CommunitiesAssembler.swift in Sources */,
+				7A0117DF220EED9C00F02008 /* CommunitiesRequestable.swift in Sources */,
 				7A0117D6220ED7D800F02008 /* Photos.swift in Sources */,
 				7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */,
 				7AAE112B2209913A005E82DE /* AppAssembler.swift in Sources */,
 				7AAE11322209ED7A005E82DE /* Result.swift in Sources */,
 				7AAE1105220872E4005E82DE /* AuthCoordinator.swift in Sources */,
 				7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */,
-				7A0117DD220EEB7300F02008 /* Groups.swift in Sources */,
+				7A0117DD220EEB7300F02008 /* Communities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

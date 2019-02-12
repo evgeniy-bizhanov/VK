@@ -6,13 +6,13 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-struct Photo: Decodable {
+struct Photo: BidirectionalMappable {
     let id: Int
     let sizes: [PhotoSize]
     let text: String
 }
 
-struct PhotoSize: Decodable {
+struct PhotoSize: BidirectionalMappable {
     let type: String
     let url: String
     let width: Int

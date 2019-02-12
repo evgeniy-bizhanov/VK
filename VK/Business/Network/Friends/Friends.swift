@@ -6,7 +6,7 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-struct Friend: Decodable {
+struct Friend: BidirectionalMappable {
     let id: Int
     let firstName: String
     let lastName: String

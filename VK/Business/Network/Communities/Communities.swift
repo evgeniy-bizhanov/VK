@@ -6,7 +6,7 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-struct Group: Decodable {
+struct Community: BidirectionalMappable {
     let id: Int
     let name: String
     let photoLow: String
@@ -14,7 +14,7 @@ struct Group: Decodable {
     let photoHigh: String
 }
 
-extension Group {
+extension Community {
     enum DecodingKeys: String, CodingKey {
         case id
         case name

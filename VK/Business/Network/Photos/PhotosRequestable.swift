@@ -14,14 +14,15 @@ enum PhotoAlbumIdentifier: Identifiable {
     case saved
 }
 
-protocol PhotosRequestManager: AbstractRequestManager {
+protocol PhotosRequestable {
     
     typealias Photos = Response<Photo>
+    typealias Completion<T: Decodable> = (T) -> Void
     
     /// Gets list of photos
     ///
     /// - Parameter userId: User identifier
-    func get(forUser userId: String, albumId: PhotoAlbumIdentifier, completion: @escaping Completion<Photos>)
+    func get<T>(forUser userId: String, albumId: PhotoAlbumIdentifier, completion: Completion<T>?)
     
     /// Gets specified numbers of photos
     ///
@@ -29,38 +30,44 @@ protocol PhotosRequestManager: AbstractRequestManager {
     /// - Parameter albumId: Photo album identifier that presented by `PhotoAlbumIdentifier`
     /// - Parameter count: Number of entries returned
     /// - Parameter offset: Return entries offset
-    func get(
+    func get<T>(
         forUser userId: String,
         albumId: PhotoAlbumIdentifier,
         count: Int,
         offset: Int,
-        completion: @escaping Completion<Photos>
+        completion: Completion<T>?
     )
 }
 
-extension RequestManager: PhotosRequestManager {
+final class PhotosRequestManager: PhotosRequestable {
     
-    func get(forUser userId: String, albumId: PhotoAlbumIdentifier, completion: @escaping Completion<Photos>) {
+    var requestManager: AbstractRequestManager!
+    
+    func get<T>(forUser userId: String, albumId: PhotoAlbumIdentifier, completion: Completion<T>?) {
         get(forUser: userId, albumId: albumId, count: 50, offset: 0, completion: completion)
     }
     
-    func get(
+    func get<T>(
         forUser userId: String,
         albumId: PhotoAlbumIdentifier,
         count: Int,
         offset: Int,
-        completion: @escaping Completion<Photos>) {
+        completion: Completion<T>?) {
         
         let urlRequest = GetRequestRouter(
-            url: url,
+            url: requestManager.url,
             ownerId: userId,
             albumId: albumId,
             count: count,
             offset: offset,
-            token: token
+            token: requestManager.token ?? ""
         )
         
-        self.request(request: urlRequest, completion: completion)
+        requestManager.request(request: urlRequest, completion: completion)
+    }
+    
+    init(requestManager: AbstractRequestManager?) {
+        self.requestManager = requestManager
     }
 }
 
@@ -79,7 +86,7 @@ fileprivate struct GetRequestRouter: RequestRouter {
     let extended = 1
     let count: Int
     let offset: Int
-    let token: String?
+    let token: String
     
     var parameters: Parameters? {
         return [
@@ -90,7 +97,7 @@ fileprivate struct GetRequestRouter: RequestRouter {
             "offset": offset,
             "count": count,
             "v": AppConfig.Api.version,
-            "access_token": token ?? ""
+            "access_token": token
         ]
     }
 }
