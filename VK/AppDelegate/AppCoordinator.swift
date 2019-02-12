@@ -14,7 +14,7 @@ final class AppCoordinator: AbstractCoordinator {
     
     override func start() {
         if let token = storage?.string(forKey: "token") {
-            navigateTo(ProfileCoordinator.self, parameters: ["token": token])
+            navigateTo(FriendsCoordinator.self, parameters: ["token": token])
         } else {
             navigateTo(AuthCoordinator.self)
         }

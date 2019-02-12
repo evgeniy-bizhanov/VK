@@ -26,6 +26,10 @@
 		7A637C662212B22B0071F399 /* FriendsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C652212B22B0071F399 /* FriendsAssembler.swift */; };
 		7A637C6A2212B2720071F399 /* CommunitiesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C692212B2720071F399 /* CommunitiesAssembler.swift */; };
 		7A637C6C2212B27F0071F399 /* PhotosAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C6B2212B27F0071F399 /* PhotosAssembler.swift */; };
+		7A637C6E2212C10D0071F399 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C6D2212C10D0071F399 /* FriendsViewController.swift */; };
+		7A637C702212C1660071F399 /* FriendsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C6F2212C1660071F399 /* FriendsModuleBuilder.swift */; };
+		7A637C722212C22F0071F399 /* FriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C712212C22F0071F399 /* FriendsPresenter.swift */; };
+		7A637C742212CA540071F399 /* FriendsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C732212CA540071F399 /* FriendsCoordinator.swift */; };
 		7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */; };
 		7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */; };
 		7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11022208706B005E82DE /* AppCoordinator.swift */; };
@@ -80,6 +84,10 @@
 		7A637C652212B22B0071F399 /* FriendsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAssembler.swift; sourceTree = "<group>"; };
 		7A637C692212B2720071F399 /* CommunitiesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesAssembler.swift; sourceTree = "<group>"; };
 		7A637C6B2212B27F0071F399 /* PhotosAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAssembler.swift; sourceTree = "<group>"; };
+		7A637C6D2212C10D0071F399 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		7A637C6F2212C1660071F399 /* FriendsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModuleBuilder.swift; sourceTree = "<group>"; };
+		7A637C712212C22F0071F399 /* FriendsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPresenter.swift; sourceTree = "<group>"; };
+		7A637C732212CA540071F399 /* FriendsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCoordinator.swift; sourceTree = "<group>"; };
 		7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
 		7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		7AAE11022208706B005E82DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -345,6 +353,10 @@
 			children = (
 				7AE3CBF022127C9A008EC751 /* Friend.swift */,
 				7AE3CBE72211BD8F008EC751 /* Friends.storyboard */,
+				7A637C6D2212C10D0071F399 /* FriendsViewController.swift */,
+				7A637C6F2212C1660071F399 /* FriendsModuleBuilder.swift */,
+				7A637C712212C22F0071F399 /* FriendsPresenter.swift */,
+				7A637C732212CA540071F399 /* FriendsCoordinator.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -525,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AAE11302209D13D005E82DE /* AppDelegateProxy.swift in Sources */,
+				7A637C702212C1660071F399 /* FriendsModuleBuilder.swift in Sources */,
 				7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */,
 				7A0117B0220C940400F02008 /* ResponseCodable.swift in Sources */,
 				7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */,
@@ -541,6 +554,7 @@
 				7AAE112222098784005E82DE /* AbstractModuleBuilder.swift in Sources */,
 				7AAE1129220989CC005E82DE /* AuthModuleBuilder.swift in Sources */,
 				7A0117BC220D850800F02008 /* Friends.swift in Sources */,
+				7A637C742212CA540071F399 /* FriendsCoordinator.swift in Sources */,
 				7AE3CBF32212856F008EC751 /* Foundation.swift in Sources */,
 				7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */,
 				7A637C6C2212B27F0071F399 /* PhotosAssembler.swift in Sources */,
@@ -549,11 +563,13 @@
 				7A0117B7220C994500F02008 /* RequestManager.swift in Sources */,
 				7AAE111022088EB0005E82DE /* Identifable.swift in Sources */,
 				7AAE111922096324005E82DE /* RequestRouter.swift in Sources */,
+				7A637C722212C22F0071F399 /* FriendsPresenter.swift in Sources */,
 				7AE3CBF122127C9A008EC751 /* Friend.swift in Sources */,
 				7A0117DA220EDB9800F02008 /* PhotosRequestable.swift in Sources */,
 				7A637C662212B22B0071F399 /* FriendsAssembler.swift in Sources */,
 				7A0117C4220D9E9800F02008 /* ProfilePresenter.swift in Sources */,
 				7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */,
+				7A637C6E2212C10D0071F399 /* FriendsViewController.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
 				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
 				7AE3CBEF22127AF0008EC751 /* Mappable.swift in Sources */,
