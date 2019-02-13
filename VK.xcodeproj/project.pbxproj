@@ -22,6 +22,9 @@
 		7A0117DA220EDB9800F02008 /* PhotosRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117D9220EDB9800F02008 /* PhotosRequestable.swift */; };
 		7A0117DD220EEB7300F02008 /* Communities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117DC220EEB7300F02008 /* Communities.swift */; };
 		7A0117DF220EED9C00F02008 /* CommunitiesRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0117DE220EED9C00F02008 /* CommunitiesRequestable.swift */; };
+		7A13B0FA2213C3E5008987B7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B0F92213C3E5008987B7 /* MainCoordinator.swift */; };
+		7A13B0FC2213CA63008987B7 /* CommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B0FB2213CA63008987B7 /* CommunitiesViewController.swift */; };
+		7A13B0FE2213CA75008987B7 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B0FD2213CA75008987B7 /* PhotosViewController.swift */; };
 		7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18BD9722085B67000C6417 /* AppConfig.swift */; };
 		7A637C662212B22B0071F399 /* FriendsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C652212B22B0071F399 /* FriendsAssembler.swift */; };
 		7A637C6A2212B2720071F399 /* CommunitiesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C692212B2720071F399 /* CommunitiesAssembler.swift */; };
@@ -30,6 +33,7 @@
 		7A637C702212C1660071F399 /* FriendsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C6F2212C1660071F399 /* FriendsModuleBuilder.swift */; };
 		7A637C722212C22F0071F399 /* FriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C712212C22F0071F399 /* FriendsPresenter.swift */; };
 		7A637C742212CA540071F399 /* FriendsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C732212CA540071F399 /* FriendsCoordinator.swift */; };
+		7A637C772213C2300071F399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A637C762213C2300071F399 /* Main.storyboard */; };
 		7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */; };
 		7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */; };
 		7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11022208706B005E82DE /* AppCoordinator.swift */; };
@@ -80,6 +84,9 @@
 		7A0117D9220EDB9800F02008 /* PhotosRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRequestable.swift; sourceTree = "<group>"; };
 		7A0117DC220EEB7300F02008 /* Communities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communities.swift; sourceTree = "<group>"; };
 		7A0117DE220EED9C00F02008 /* CommunitiesRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesRequestable.swift; sourceTree = "<group>"; };
+		7A13B0F92213C3E5008987B7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		7A13B0FB2213CA63008987B7 /* CommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewController.swift; sourceTree = "<group>"; };
+		7A13B0FD2213CA75008987B7 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		7A18BD9722085B67000C6417 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7A637C652212B22B0071F399 /* FriendsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAssembler.swift; sourceTree = "<group>"; };
 		7A637C692212B2720071F399 /* CommunitiesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesAssembler.swift; sourceTree = "<group>"; };
@@ -88,6 +95,7 @@
 		7A637C6F2212C1660071F399 /* FriendsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModuleBuilder.swift; sourceTree = "<group>"; };
 		7A637C712212C22F0071F399 /* FriendsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPresenter.swift; sourceTree = "<group>"; };
 		7A637C732212CA540071F399 /* FriendsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCoordinator.swift; sourceTree = "<group>"; };
+		7A637C762213C2300071F399 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
 		7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		7AAE11022208706B005E82DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -224,6 +232,8 @@
 		7A18BD95220858EB000C6417 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				7A637C762213C2300071F399 /* Main.storyboard */,
+				7A13B0F92213C3E5008987B7 /* MainCoordinator.swift */,
 				7AAE110722088C2B005E82DE /* Auth */,
 				7AAE11332209F0C5005E82DE /* Profile */,
 				7AE3CBE42211BD39008EC751 /* Friends */,
@@ -365,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				7AE3CBEA2211BDA3008EC751 /* Communities.storyboard */,
+				7A13B0FB2213CA63008987B7 /* CommunitiesViewController.swift */,
 			);
 			path = Communities;
 			sourceTree = "<group>";
@@ -373,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				7AE3CBEC2211BDB0008EC751 /* Photos.storyboard */,
+				7A13B0FD2213CA75008987B7 /* PhotosViewController.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -471,6 +483,7 @@
 				7AE3CBED2211BDB0008EC751 /* Photos.storyboard in Resources */,
 				7AAE110922088C47005E82DE /* Auth.storyboard in Resources */,
 				7AE3CBE82211BD8F008EC751 /* Friends.storyboard in Resources */,
+				7A637C772213C2300071F399 /* Main.storyboard in Resources */,
 				7AE3CBEB2211BDA3008EC751 /* Communities.storyboard in Resources */,
 				7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */,
 				7AAE11352209F108005E82DE /* Profile.storyboard in Resources */,
@@ -547,6 +560,7 @@
 				7AAE110B22088C86005E82DE /* AuthViewController.swift in Sources */,
 				7A0117CB220DA79F00F02008 /* NetworkingAssembler.swift in Sources */,
 				7A0117B2220C976200F02008 /* AbstractRequestManager.swift in Sources */,
+				7A13B0FA2213C3E5008987B7 /* MainCoordinator.swift in Sources */,
 				7AAE11372209F15F005E82DE /* ProfileViewController.swift in Sources */,
 				7AAE111222088EDC005E82DE /* UIViewController.swift in Sources */,
 				7AAE1126220987E0005E82DE /* AuthAssembler.swift in Sources */,
@@ -557,6 +571,7 @@
 				7A637C742212CA540071F399 /* FriendsCoordinator.swift in Sources */,
 				7AE3CBF32212856F008EC751 /* Foundation.swift in Sources */,
 				7AAE110E22088E6F005E82DE /* UIStoryboard.swift in Sources */,
+				7A13B0FC2213CA63008987B7 /* CommunitiesViewController.swift in Sources */,
 				7A637C6C2212B27F0071F399 /* PhotosAssembler.swift in Sources */,
 				7A0117CD220DAAE900F02008 /* ProfileModuleBuilder.swift in Sources */,
 				7A0117D8220EDA1200F02008 /* Response.swift in Sources */,
@@ -566,6 +581,7 @@
 				7A637C722212C22F0071F399 /* FriendsPresenter.swift in Sources */,
 				7AE3CBF122127C9A008EC751 /* Friend.swift in Sources */,
 				7A0117DA220EDB9800F02008 /* PhotosRequestable.swift in Sources */,
+				7A13B0FE2213CA75008987B7 /* PhotosViewController.swift in Sources */,
 				7A637C662212B22B0071F399 /* FriendsAssembler.swift in Sources */,
 				7A0117C4220D9E9800F02008 /* ProfilePresenter.swift in Sources */,
 				7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */,
