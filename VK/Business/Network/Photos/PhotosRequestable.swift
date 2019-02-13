@@ -8,7 +8,7 @@
 
 import Alamofire
 
-enum PhotoAlbumIdentifier: Identifiable {
+enum PhotoAlbumIdentifier: EnumIdentifiable {
     case wall
     case profile
     case saved

@@ -25,6 +25,10 @@
 		7A13B0FA2213C3E5008987B7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B0F92213C3E5008987B7 /* MainCoordinator.swift */; };
 		7A13B0FC2213CA63008987B7 /* CommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B0FB2213CA63008987B7 /* CommunitiesViewController.swift */; };
 		7A13B0FE2213CA75008987B7 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B0FD2213CA75008987B7 /* PhotosViewController.swift */; };
+		7A13B1012213D345008987B7 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B1002213D345008987B7 /* UITableView.swift */; };
+		7A13B1032213D45D008987B7 /* PersonViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B1022213D45D008987B7 /* PersonViewItem.swift */; };
+		7A13B1052213D4DB008987B7 /* AbstractTableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B1042213D4DB008987B7 /* AbstractTableViewItem.swift */; };
+		7A13B1092213D70B008987B7 /* TableViewItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B1082213D70B008987B7 /* TableViewItemType.swift */; };
 		7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18BD9722085B67000C6417 /* AppConfig.swift */; };
 		7A637C662212B22B0071F399 /* FriendsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C652212B22B0071F399 /* FriendsAssembler.swift */; };
 		7A637C6A2212B2720071F399 /* CommunitiesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C692212B2720071F399 /* CommunitiesAssembler.swift */; };
@@ -87,6 +91,10 @@
 		7A13B0F92213C3E5008987B7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		7A13B0FB2213CA63008987B7 /* CommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewController.swift; sourceTree = "<group>"; };
 		7A13B0FD2213CA75008987B7 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		7A13B1002213D345008987B7 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		7A13B1022213D45D008987B7 /* PersonViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewItem.swift; sourceTree = "<group>"; };
+		7A13B1042213D4DB008987B7 /* AbstractTableViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractTableViewItem.swift; sourceTree = "<group>"; };
+		7A13B1082213D70B008987B7 /* TableViewItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewItemType.swift; sourceTree = "<group>"; };
 		7A18BD9722085B67000C6417 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7A637C652212B22B0071F399 /* FriendsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAssembler.swift; sourceTree = "<group>"; };
 		7A637C692212B2720071F399 /* CommunitiesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesAssembler.swift; sourceTree = "<group>"; };
@@ -234,6 +242,8 @@
 			children = (
 				7A637C762213C2300071F399 /* Main.storyboard */,
 				7A13B0F92213C3E5008987B7 /* MainCoordinator.swift */,
+				7A13B1082213D70B008987B7 /* TableViewItemType.swift */,
+				7A13B1042213D4DB008987B7 /* AbstractTableViewItem.swift */,
 				7AAE110722088C2B005E82DE /* Auth */,
 				7AAE11332209F0C5005E82DE /* Profile */,
 				7AE3CBE42211BD39008EC751 /* Friends */,
@@ -282,6 +292,7 @@
 			children = (
 				7AAE110D22088E6F005E82DE /* UIStoryboard.swift */,
 				7AAE111122088EDC005E82DE /* UIViewController.swift */,
+				7A13B1002213D345008987B7 /* UITableView.swift */,
 				7AE3CBF22212856F008EC751 /* Foundation.swift */,
 			);
 			path = Extensions;
@@ -367,6 +378,7 @@
 				7A637C6F2212C1660071F399 /* FriendsModuleBuilder.swift */,
 				7A637C712212C22F0071F399 /* FriendsPresenter.swift */,
 				7A637C732212CA540071F399 /* FriendsCoordinator.swift */,
+				7A13B1022213D45D008987B7 /* PersonViewItem.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -551,9 +563,11 @@
 			files = (
 				7AAE11302209D13D005E82DE /* AppDelegateProxy.swift in Sources */,
 				7A637C702212C1660071F399 /* FriendsModuleBuilder.swift in Sources */,
+				7A13B1052213D4DB008987B7 /* AbstractTableViewItem.swift in Sources */,
 				7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */,
 				7A0117B0220C940400F02008 /* ResponseCodable.swift in Sources */,
 				7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */,
+				7A13B1092213D70B008987B7 /* TableViewItemType.swift in Sources */,
 				7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */,
 				7A0117BE220D87DC00F02008 /* FriendsRequestable.swift in Sources */,
 				7AAE112D220994D2005E82DE /* AppBuilder.swift in Sources */,
@@ -577,6 +591,7 @@
 				7A0117D8220EDA1200F02008 /* Response.swift in Sources */,
 				7A0117B7220C994500F02008 /* RequestManager.swift in Sources */,
 				7AAE111022088EB0005E82DE /* Identifable.swift in Sources */,
+				7A13B1032213D45D008987B7 /* PersonViewItem.swift in Sources */,
 				7AAE111922096324005E82DE /* RequestRouter.swift in Sources */,
 				7A637C722212C22F0071F399 /* FriendsPresenter.swift in Sources */,
 				7AE3CBF122127C9A008EC751 /* Friend.swift in Sources */,
@@ -592,6 +607,7 @@
 				7A637C6A2212B2720071F399 /* CommunitiesAssembler.swift in Sources */,
 				7A0117DF220EED9C00F02008 /* CommunitiesRequestable.swift in Sources */,
 				7A0117D6220ED7D800F02008 /* Photos.swift in Sources */,
+				7A13B1012213D345008987B7 /* UITableView.swift in Sources */,
 				7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */,
 				7AAE112B2209913A005E82DE /* AppAssembler.swift in Sources */,
 				7AAE11322209ED7A005E82DE /* Result.swift in Sources */,

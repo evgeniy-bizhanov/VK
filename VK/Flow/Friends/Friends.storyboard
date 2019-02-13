@@ -17,7 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="vss-r0-wwe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o18-2O-chk">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o18-2O-chk" firstAttribute="leading" secondItem="tK2-iC-nUX" secondAttribute="leading" id="2tK-ib-d6E"/>
+                            <constraint firstItem="tK2-iC-nUX" firstAttribute="trailing" secondItem="o18-2O-chk" secondAttribute="trailing" id="6eV-b8-zsT"/>
+                            <constraint firstItem="o18-2O-chk" firstAttribute="top" secondItem="tK2-iC-nUX" secondAttribute="top" id="pda-8V-lK8"/>
+                            <constraint firstItem="tK2-iC-nUX" firstAttribute="bottom" secondItem="o18-2O-chk" secondAttribute="bottom" id="xqu-fm-1if"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tK2-iC-nUX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Друзья" id="zuY-vB-zAI"/>
