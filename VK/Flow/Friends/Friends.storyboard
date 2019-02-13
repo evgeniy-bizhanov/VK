@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="o18-2O-chk" firstAttribute="leading" secondItem="tK2-iC-nUX" secondAttribute="leading" id="2tK-ib-d6E"/>
                             <constraint firstItem="tK2-iC-nUX" firstAttribute="trailing" secondItem="o18-2O-chk" secondAttribute="trailing" id="6eV-b8-zsT"/>
@@ -33,6 +33,9 @@
                         <viewLayoutGuide key="safeArea" id="tK2-iC-nUX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Друзья" id="zuY-vB-zAI"/>
+                    <connections>
+                        <outlet property="tableView" destination="o18-2O-chk" id="kmW-lT-MH1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8V5-lb-hNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="y6V-Db-azx" customClass="FriendsModuleBuilder" customModule="VK" customModuleProvider="target">

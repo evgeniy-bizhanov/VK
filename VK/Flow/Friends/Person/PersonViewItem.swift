@@ -6,17 +6,22 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-enum PointViewType: String, TableViewItemType {
-    case online = "онлайн"
-    case offline = "прочие"
+enum PersonViewType: String, TableViewItemType {
+    
+    var label: String { return self.rawValue }
+    
+    case online = "Онлайн"
+    case offline = "Прочие"
 }
 
 struct PersonViewItem: AbstractTableViewItem {
     
+    typealias Element = VMPerson
+    
     // MARK: - Properties
     
     var type: TableViewItemType
-    var collection: [String]
+    var collection: [Element]
     var rowCount: Int {
         return collection.count
     }
@@ -26,7 +31,7 @@ struct PersonViewItem: AbstractTableViewItem {
     // MARK: - Functions
     // MARK: - Initializers
     
-    init?(_ type: PointViewType, withValues collection: [String]) {
+    init?(_ type: PersonViewType, withValues collection: [Element]) {
         guard collection.count > 0 else { return nil }
         
         self.type = type

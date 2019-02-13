@@ -39,7 +39,7 @@ class ProfilePresenter: ProfileInput {
             fatalError("User id can't be null")
         }
         
-        requestManager?.get(forUser: userId, count: 1, offset: 0) { (response: [VMFriend]) in
+        requestManager?.get(forUser: userId, count: 1, offset: 0) { (response: [VMPerson]) in
             print(response)
         }
     }

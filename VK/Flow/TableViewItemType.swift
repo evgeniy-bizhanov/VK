@@ -6,7 +6,9 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-protocol TableViewItemType: Identifiable {}
+protocol TableViewItemType: Identifiable {
+    var label: String { get }
+}
 
 extension Identifiable where Self: TableViewItemType {
     var identifier: String {

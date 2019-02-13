@@ -8,6 +8,8 @@
 
 protocol AbstractTableViewItem {
     
+    associatedtype Element
+    
     /// The type of point section item
     var type: TableViewItemType { get }
     
@@ -18,7 +20,7 @@ protocol AbstractTableViewItem {
     var label: String { get }
     
     /// Collection of items
-    var collection: [String] { get }
+    var collection: [Element] { get }
 }
 
 extension AbstractTableViewItem {
