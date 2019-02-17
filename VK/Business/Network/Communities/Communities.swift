@@ -6,12 +6,15 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-struct Community: BidirectionalMappable {
-    let id: Int
-    let name: String
-    let photoLow: String
-    let photoMedium: String
-    let photoHigh: String
+import RealmSwift
+
+@objcMembers
+final class Community: Object, BidirectionalMappable {
+    dynamic var id: Int = 0
+    dynamic var name: String = ""
+    dynamic var photoLow: String = ""
+    dynamic var photoMedium: String = ""
+    dynamic var photoHigh: String = ""
 }
 
 extension Community {
@@ -23,7 +26,8 @@ extension Community {
         case photoHigh = "photo_200"
     }
     
-    init(from decoder: Decoder) throws {
+    convenience init(from decoder: Decoder) throws {
+        self.init()
         let container = try decoder.container(keyedBy: DecodingKeys.self)
         
         self.id = try container.decode(Int.self, forKey: .id)
