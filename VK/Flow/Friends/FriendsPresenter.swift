@@ -51,7 +51,7 @@ class FriendsPresenter: NSObject, FriendsViewInput {
             }
             
             let onlinePersons = PersonViewItem(.online, withValues: response.filter { $0.isOnline })
-            let offlinePersons = PersonViewItem(.offline, withValues: response.filter { !$0.isOnline })
+            let offlinePersons = PersonViewItem(.offline, withValues: response)
             self.items = [onlinePersons, offlinePersons].compactMap { $0 }
             
             DispatchQueue.main.async {

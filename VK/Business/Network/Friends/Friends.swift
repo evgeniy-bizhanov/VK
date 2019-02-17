@@ -10,6 +10,7 @@ struct Friend: BidirectionalMappable {
     let id: Int
     let firstName: String
     let lastName: String
+    let image: String
     let online: Int
 }
 
@@ -18,6 +19,7 @@ extension Friend {
         case id
         case firstName = "first_name"
         case lastName = "last_name"
+        case image = "photo_100"
         case online
     }
     
@@ -27,6 +29,7 @@ extension Friend {
         self.id = try container.decode(Int.self, forKey: .id)
         self.firstName = try container.decode(String.self, forKey: .firstName)
         self.lastName = try container.decode(String.self, forKey: .lastName)
+        self.image = try container.decode(String.self, forKey: .image)
         self.online = try container.decode(Int.self, forKey: .online)
     }
 }

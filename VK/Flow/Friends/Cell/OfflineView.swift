@@ -13,13 +13,15 @@ class OfflineView: UITableViewCell, PersonViewCell {
     // MARK: - IBOutlets
     
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var isOnline: UIView!
+    @IBOutlet weak var profileImage: UIImageView!
     
     
     // MARK: - Models
     
     var model: VMPerson? {
         didSet {
-            title.text = model?.firstName
+            assignModel(model)
         }
     }
     
@@ -34,6 +36,36 @@ class OfflineView: UITableViewCell, PersonViewCell {
         super.awakeFromNib()
     }
     
+    func assignModel(_ model: VMPerson?) {
+        
+        guard let model = model else {
+            return
+        }
+        
+        title.attributedText = constructFullName(model)
+    }
+    
     
     // MARK: - Initializers
+}
+
+extension OfflineView {
+    fileprivate func constructFullName(_ model: VMPerson) -> NSAttributedString {
+        let fullName = (model.firstName + " " + model.lastName)
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let attributedFullName = NSMutableAttributedString(string: fullName)
+        let range = NSRange(
+            location: model.firstName != "" ? model.firstName.count + 1 : 0,
+            length: model.lastName.count
+        )
+        
+        let font = UIFont.systemFont(ofSize: title.font.pointSize, weight: .medium)
+        attributedFullName.setAttributes(
+            [NSAttributedString.Key.font: font],
+            range: range
+        )
+        
+        return attributedFullName
+    }
 }

@@ -6,12 +6,23 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
+import Foundation
+import UIKit
+import Kingfisher
+
 struct VMPerson: Decodable {
     let id: Int
     let firstName: String
     let lastName: String
+    let image: String
     let isOnline: Bool
 }
+
+
+// MARK: - Extensions
+
+
+// MARK: Decodable
 
 extension VMPerson {
     
@@ -19,6 +30,7 @@ extension VMPerson {
         case id
         case firstName
         case lastName
+        case image
         case isOnline = "online"
     }
     
@@ -28,6 +40,7 @@ extension VMPerson {
         id = try container.decode(Int.self, forKey: .id)
         firstName = try container.decode(String.self, forKey: .firstName)
         lastName = try container.decode(String.self, forKey: .lastName)
+        image = try container.decode(String.self, forKey: .image)
         isOnline = try container.decode(Int.self, forKey: .isOnline) > 0
     }
 }

@@ -9,7 +9,9 @@ target 'VK' do
 
   pod 'Bond', '~> 7.1'
   pod 'Alamofire', '~> 4.8'
+  pod 'Kingfisher', '~> 5.1'
   pod 'Swinject', '~> 2.5'
   pod 'KeychainAccess', '~> 3.1'
+  pod 'RealmSwift', '~> 3.13'
 
 end

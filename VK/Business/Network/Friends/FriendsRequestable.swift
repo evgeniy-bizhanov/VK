@@ -46,7 +46,7 @@ final class FriendsRequestManager: FriendsRequestable {
             userId: userId,
             count: count,
             offset: offset,
-            fields: "online",
+            fields: "online, photo_100",
             token: requestManager.token ?? ""
         )
         

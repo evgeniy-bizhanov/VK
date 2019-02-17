@@ -35,6 +35,7 @@
 		7A13B1152213DCD3008987B7 /* OfflineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A13B1132213DCD3008987B7 /* OfflineView.xib */; };
 		7A13B1172213E646008987B7 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B1162213E646008987B7 /* PersonViewCell.swift */; };
 		7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18BD9722085B67000C6417 /* AppConfig.swift */; };
+		7A2B508222169365002E9B08 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B508122169364002E9B08 /* UIExtensions.swift */; };
 		7A637C662212B22B0071F399 /* FriendsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C652212B22B0071F399 /* FriendsAssembler.swift */; };
 		7A637C6A2212B2720071F399 /* CommunitiesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C692212B2720071F399 /* CommunitiesAssembler.swift */; };
 		7A637C6C2212B27F0071F399 /* PhotosAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C6B2212B27F0071F399 /* PhotosAssembler.swift */; };
@@ -106,6 +107,7 @@
 		7A13B1132213DCD3008987B7 /* OfflineView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfflineView.xib; sourceTree = "<group>"; };
 		7A13B1162213E646008987B7 /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
 		7A18BD9722085B67000C6417 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		7A2B508122169364002E9B08 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		7A637C652212B22B0071F399 /* FriendsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAssembler.swift; sourceTree = "<group>"; };
 		7A637C692212B2720071F399 /* CommunitiesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesAssembler.swift; sourceTree = "<group>"; };
 		7A637C6B2212B27F0071F399 /* PhotosAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAssembler.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 		7AAE110C22088E5B005E82DE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7A2B508122169364002E9B08 /* UIExtensions.swift */,
 				7AAE110D22088E6F005E82DE /* UIStoryboard.swift */,
 				7AAE111122088EDC005E82DE /* UIViewController.swift */,
 				7A13B1002213D345008987B7 /* UITableView.swift */,
@@ -574,7 +577,10 @@
 				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
 				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -585,7 +591,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +609,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2B508222169365002E9B08 /* UIExtensions.swift in Sources */,
 				7AAE11302209D13D005E82DE /* AppDelegateProxy.swift in Sources */,
 				7A637C702212C1660071F399 /* FriendsModuleBuilder.swift in Sources */,
 				7A13B1052213D4DB008987B7 /* AbstractTableViewItem.swift in Sources */,
