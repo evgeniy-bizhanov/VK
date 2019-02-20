@@ -55,7 +55,7 @@ class FriendsPresenter: NSObject, FriendsViewInput {
                 first.lastName < second.lastName
             }
             
-            let dictionary = Dictionary(grouping: sorted, by: { String($0.lastName.first ?? "#") }).sorted { (first, second) in
+            let dictionary = Dictionary(grouping: sorted, by: { String($0.lastName.first ?? $0.firstName.first ?? "#") }).sorted { (first, second) in
                 first.key < second.key
             }
             
