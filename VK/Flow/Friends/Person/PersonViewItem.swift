@@ -21,6 +21,7 @@ struct PersonViewItem: AbstractTableViewItem {
     // MARK: - Properties
     
     var type: TableViewItemType
+    var label: String?
     var collection: [Element]
     var rowCount: Int {
         return collection.count
@@ -36,5 +37,10 @@ struct PersonViewItem: AbstractTableViewItem {
         
         self.type = type
         self.collection = collection
+    }
+    
+    init?(_ type: PersonViewType, label: String, withValues collection: [Element]) {
+        self.init(type, withValues: collection)
+        self.label = label
     }
 }

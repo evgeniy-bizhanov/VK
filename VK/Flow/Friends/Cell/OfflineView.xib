@@ -46,12 +46,20 @@
                             </view>
                         </subviews>
                     </stackView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-ua-kZN">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-ua-kZN">
                         <rect key="frame" x="16" y="4" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="bJp-ua-kZN" secondAttribute="height" multiplier="1:1" id="3yy-8a-9LC"/>
                             <constraint firstAttribute="height" constant="36" id="G9U-P8-2Zh"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="18"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="rect" keyPath="maskedCorners">
+                                <rect key="value" x="1" y="1" width="1" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                 </subviews>
                 <constraints>

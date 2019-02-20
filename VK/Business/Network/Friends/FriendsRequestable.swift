@@ -15,17 +15,18 @@ protocol FriendsRequestable {
     typealias Friends = Response<Friend>
     typealias Completion<T: Decodable> = (T) -> Void
     
-    /// Gets list of friends
-    ///
-    /// - Parameter userId: User identifier
-    func get<T>(forUser userId: String, completion: Completion<T>?)
-    
     /// Gets specified numbers of friends
     ///
     /// - Parameter userId: User identifier
     /// - Parameter count: Number of entries returned
     /// - Parameter offset: Return entries offset
-    func get<T>(forUser userId: String, count: Int, offset: Int, completion: Completion<T>?)
+    func get<T>(forUser userId: String, count: Int?, offset: Int?, completion: Completion<T>?)
+}
+
+extension FriendsRequestable {
+    func get<T>(forUser userId: String, count: Int? = nil, offset: Int? = nil, completion: Completion<T>?) {
+        get(forUser: userId, count: count, offset: offset, completion: completion)
+    }
 }
 
 
@@ -35,11 +36,7 @@ final class FriendsRequestManager: FriendsRequestable {
     
     var requestManager: AbstractRequestManager!
     
-    func get<T>(forUser userId: String, completion: Completion<T>?) {
-        get(forUser: userId, count: 50, offset: 0, completion: completion)
-    }
-    
-    func get<T>(forUser userId: String, count: Int, offset: Int, completion: Completion<T>?) {
+    func get<T>(forUser userId: String, count: Int? = nil, offset: Int? = nil, completion: Completion<T>?) {
         
         let urlRequest = GetRequestRouter(
             url: requestManager.url,
@@ -75,19 +72,27 @@ fileprivate struct GetRequestRouter: RequestRouter {
     let apiMethod: String = "/friends.get"
     
     let userId: String
-    let count: Int
-    let offset: Int
+    let count: Int?
+    let offset: Int?
     let fields: String
     let token: String
     
     var parameters: Parameters? {
-        return [
+        var dict: Parameters = [
             "user_id": userId,
-            "count": count,
-            "offset": offset,
             "fields": fields,
             "v": AppConfig.Api.version,
             "access_token": token
         ]
+        
+        if
+            let count = count,
+            let offset = offset {
+            
+            dict["count"] = count
+            dict["offset"] = offset
+        }
+        
+        return dict
     }
 }

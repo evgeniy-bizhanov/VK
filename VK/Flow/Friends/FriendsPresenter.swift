@@ -33,6 +33,7 @@ class FriendsPresenter: NSObject, FriendsViewInput {
     // MARK: - Fields
     
     private lazy var userId: String? = { return storageManager?.string(forKey: "userId") }()
+    var contentLetters: [String]?
     
     
     // MARK: - IBActions
@@ -50,9 +51,27 @@ class FriendsPresenter: NSObject, FriendsViewInput {
                 return
             }
             
-            let onlinePersons = PersonViewItem(.online, withValues: response.filter { $0.isOnline })
-            let offlinePersons = PersonViewItem(.offline, withValues: response)
-            self.items = [onlinePersons, offlinePersons].compactMap { $0 }
+            let sorted = response.sorted { first, second in
+                first.lastName < second.lastName
+            }
+            
+            let dictionary = Dictionary(grouping: sorted, by: { String($0.lastName.first ?? "#") }).sorted { (first, second) in
+                first.key < second.key
+            }
+            
+            let onlinePersons = PersonViewItem(.online, withValues: sorted.filter { $0.isOnline })
+            
+            self.items = [onlinePersons].compactMap { $0 }
+            
+            dictionary.forEach { key, value in
+                if let item = PersonViewItem(.offline, label: key, withValues: value) {
+                    self.items?.append(item)
+                }
+            }
+            
+            self.contentLetters = dictionary.map { key, _ in
+                return key
+            }
             
             DispatchQueue.main.async {
                 self.output.fetchedData()
@@ -72,12 +91,21 @@ class FriendsPresenter: NSObject, FriendsViewInput {
 }
 
 extension FriendsPresenter: UITableViewDataSource {
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return contentLetters
+    }
+    
+    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return index + 1
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return tableView.numberOfSections > 1 ? items?[section].type.label : nil
+        return tableView.numberOfSections > 1 ? items?[section].label ?? items?[section].type.label : nil
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

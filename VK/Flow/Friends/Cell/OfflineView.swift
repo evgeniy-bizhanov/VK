@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class OfflineView: UITableViewCell, PersonViewCell {
 
@@ -43,6 +44,10 @@ class OfflineView: UITableViewCell, PersonViewCell {
         }
         
         title.attributedText = constructFullName(model)
+        isOnline.isHidden = !model.isOnline
+        if let url = URL(string: model.image) {
+            profileImage.kf.setImage(with: url)
+        }
     }
     
     

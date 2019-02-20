@@ -8,14 +8,17 @@
 
 import Foundation
 import UIKit
-import Kingfisher
 
-struct VMPerson: Decodable {
-    let id: Int
-    let firstName: String
-    let lastName: String
-    let image: String
-    let isOnline: Bool
+final class VMPerson: Decodable, CustomStringConvertible {
+    var id: Int = 0
+    var firstName: String = ""
+    var lastName: String = ""
+    var image: String = ""
+    var isOnline: Bool = false
+    
+    var description: String {
+        return lastName
+    }
 }
 
 
@@ -34,7 +37,9 @@ extension VMPerson {
         case isOnline = "online"
     }
     
-    init(from decoder: Decoder) throws {
+    convenience init(from decoder: Decoder) throws {
+        self.init()
+        
         let container = try decoder.container(keyedBy: DecodingKeys.self)
         
         id = try container.decode(Int.self, forKey: .id)

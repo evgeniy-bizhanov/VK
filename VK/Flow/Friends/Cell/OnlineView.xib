@@ -20,19 +20,37 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23e-Eu-4hu">
-                        <rect key="frame" x="16" y="11.5" width="42" height="21"/>
+                        <rect key="frame" x="60" y="11.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qNm-dx-3b6">
+                        <rect key="frame" x="16" y="4" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="qNm-dx-3b6" secondAttribute="height" multiplier="1:1" id="Jin-VR-uCA"/>
+                            <constraint firstAttribute="height" constant="36" id="aTk-Ny-qgJ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="18"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="rect" keyPath="maskedCorners">
+                                <rect key="value" x="1" y="1" width="1" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="qNm-dx-3b6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BeW-52-8SG"/>
                     <constraint firstItem="23e-Eu-4hu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DhB-VO-Ie9"/>
-                    <constraint firstItem="23e-Eu-4hu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="caL-hw-5Cv"/>
+                    <constraint firstItem="qNm-dx-3b6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="S8q-pH-a9Y"/>
+                    <constraint firstItem="23e-Eu-4hu" firstAttribute="leading" secondItem="qNm-dx-3b6" secondAttribute="trailing" constant="8" id="eFf-MZ-FLN"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="profileImage" destination="qNm-dx-3b6" id="krN-VJ-FJO"/>
                 <outlet property="title" destination="23e-Eu-4hu" id="Xbc-sz-U9C"/>
             </connections>
         </tableViewCell>
