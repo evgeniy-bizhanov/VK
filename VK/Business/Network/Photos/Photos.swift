@@ -6,13 +6,15 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-struct Photo: Decodable {
+import RealmSwift
+
+class Photo: Object, BidirectionalMappable {
     let id: Int
     let sizes: [PhotoSize]
     let text: String
 }
 
-struct PhotoSize: Decodable {
+class PhotoSize: Object, BidirectionalMappable {
     let type: String
     let url: String
     let width: Int

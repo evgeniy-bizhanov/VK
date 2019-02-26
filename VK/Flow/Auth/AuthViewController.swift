@@ -98,6 +98,7 @@ extension AuthViewController: WKNavigationDelegate {
         
         if params["state"] == "success" {
             input?.retrieved(token: params["access_token"], forUser: params["user_id"])
+            finishFlow?()
             decision = .cancel
         }
         

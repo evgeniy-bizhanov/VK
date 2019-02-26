@@ -9,7 +9,6 @@
 /// Supply type identifier based on its name
 protocol Identifiable {
     static var identifier: String { get }
-    var identifier: String { get }
 }
 
 extension Identifiable {
@@ -18,7 +17,11 @@ extension Identifiable {
     static var identifier: String {
         return String(describing: self)
     }
-    
+}
+
+protocol EnumIdentifiable: Identifiable {}
+
+extension Identifiable where Self: EnumIdentifiable {
     var identifier: String {
         return String(describing: self)
     }

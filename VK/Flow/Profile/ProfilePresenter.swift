@@ -17,7 +17,7 @@ class ProfilePresenter: ProfileInput {
     // MARK: - Models
     // MARK: - Services
     
-    let requestManager: NetworkingService?
+    let requestManager: FriendsRequestable?
     let keychainStorage: KeyValueStorage?
     
     
@@ -39,27 +39,15 @@ class ProfilePresenter: ProfileInput {
             fatalError("User id can't be null")
         }
         
-        (requestManager as? FriendsRequestManager)?.get(forUser: userId, count: 1, offset: 0) { response in
-            print("\n-- FRIENDS --\n \(response.value?.response.items)")
-        }
-        
-        requestManager?.get(forUser: userId, albumId: .profile, count: 1, offset: 0) { response in
-            print("\n-- PHOTOS --\n \(response.value?.response.items)")
-        }
-        
-        (requestManager as? GroupsRequestManager)?.get(forUser: userId, count: 1, offset: 0) { response in
-            print("\n-- GROUPS --\n \(response.value?.response.items)")
-        }
-        
-        requestManager?.search(byQuery: "Music", count: 1, offset: 0) { response in
-            print("\n-- SEARCH BY 'MUSIC' RESULTS --\n \(response.value?.response.items)")
+        requestManager?.get(forUser: userId, count: 1, offset: 0) { (response: [VMPerson]) in
+            print(response)
         }
     }
     
     
     // MARK: - Initializers
     
-    init(output: ProfileOutput?, requestManager: NetworkingService?, keychainStorage: KeyValueStorage?) {
+    init(output: ProfileOutput?, requestManager: FriendsRequestable?, keychainStorage: KeyValueStorage?) {
         self.output = output
         self.requestManager = requestManager
         self.keychainStorage = keychainStorage

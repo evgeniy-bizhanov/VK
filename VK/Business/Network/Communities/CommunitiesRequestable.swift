@@ -8,84 +8,98 @@
 
 import Alamofire
 
-protocol GroupsRequestManager: AbstractRequestManager {
+protocol CommunitiesRequestable {
     
-    typealias Groups = Response<Group>
+    typealias Groups = Response<Community>
+    typealias Completion<T: Decodable> = (T) -> Void
     
     /// Gets list of communities
     ///
     /// - Parameter userId: User identifier
-    func get(forUser userId: String, completion: @escaping Completion<Groups>)
+    func get<T>(forUser userId: String, completion: Completion<T>?)
     
     /// Gets specified numbers of communities
     ///
     /// - Parameter userId: User identifier
     /// - Parameter count: Number of entries returned
     /// - Parameter offset: Return entries offset
-    func get(
+    func get<T>(
         forUser userId: String,
         count: Int,
         offset: Int,
-        completion: @escaping Completion<Groups>
+        completion: Completion<T>?
     )
     
     /// Searches communities for a given substring
     ///
     /// - Parameter query: Query substring
-    func search(byQuery query: String, completion: @escaping Completion<Groups>)
+    func search<T>(byQuery query: String, completion: Completion<T>?)
     
     /// Searches specified numbers of communities for a given substring
     ///
     /// - Parameter query: Query substring
     /// - Parameter count: Number of entries returned
     /// - Parameter offset: Return entries offset
-    func search(
+    func search<T>(
         byQuery query: String,
         count: Int,
         offset: Int,
-        completion: @escaping Completion<Groups>
+        completion: Completion<T>?
     )
 }
 
-extension RequestManager: GroupsRequestManager {
+final class CommunitiesRequestManager: CommunitiesRequestable {
+    
+    var requestManager: AbstractRequestManager!
     
     // MARK: Getting
-    func get(forUser userId: String, completion: @escaping Completion<Groups>) {
+    func get<T>(forUser userId: String, completion: Completion<T>?) {
         get(forUser: userId, count: 50, offset: 0, completion: completion)
     }
     
-    func get(
+    func get<T>(
         forUser userId: String,
         count: Int,
         offset: Int,
-        completion: @escaping Completion<Groups>) {
+        completion: Completion<T>?) {
         
-        let urlRequest = GetRequestRouter(url: url, userId: userId, count: count, offset: offset, token: token)
-        self.request(request: urlRequest, completion: completion)
+        let urlRequest = GetRequestRouter(
+            url: requestManager.url,
+            userId: userId,
+            count: count,
+            offset: offset,
+            token: requestManager.token ?? ""
+        )
+        
+        requestManager.request(request: urlRequest, completion: completion)
     }
     
     
     // MARK: Searching
     
-    func search(byQuery query: String, completion: @escaping Completion<Groups>) {
+    func search<T>(byQuery query: String, completion: Completion<T>?) {
         search(byQuery: query, count: 50, offset: 0, completion: completion)
     }
     
-    func search(
+    func search<T>(
         byQuery query: String,
         count: Int,
         offset: Int,
-        completion: @escaping Completion<Groups>) {
+        completion: Completion<T>?) {
         
         let urlRequest = SearchRequestRouter(
-            url: url,
+            url: requestManager.url,
             query: query,
             count: count,
             offset: offset,
-            token: token
+            token: requestManager.token ?? ""
         )
         
-        self.request(request: urlRequest, completion: completion)
+        requestManager.request(request: urlRequest, completion: completion)
+    }
+    
+    init(requestManager: AbstractRequestManager?) {
+        self.requestManager = requestManager
     }
 }
 
@@ -102,7 +116,7 @@ fileprivate struct GetRequestRouter: RequestRouter {
     let extended = 1
     let count: Int
     let offset: Int
-    let token: String?
+    let token: String
     
     var parameters: Parameters? {
         return [
@@ -111,7 +125,7 @@ fileprivate struct GetRequestRouter: RequestRouter {
             "offset": offset,
             "count": count,
             "v": AppConfig.Api.version,
-            "access_token": token ?? ""
+            "access_token": token
         ]
     }
 }
@@ -125,7 +139,7 @@ fileprivate struct SearchRequestRouter: RequestRouter {
     let query: String
     let count: Int
     let offset: Int
-    let token: String?
+    let token: String
     
     var parameters: Parameters? {
         return [
@@ -133,7 +147,7 @@ fileprivate struct SearchRequestRouter: RequestRouter {
             "offset": offset,
             "count": count,
             "v": AppConfig.Api.version,
-            "access_token": token ?? ""
+            "access_token": token
         ]
     }
 }
