@@ -15,6 +15,10 @@ final class Community: Object, BidirectionalMappable {
     dynamic var photoLow: String = ""
     dynamic var photoMedium: String = ""
     dynamic var photoHigh: String = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 extension Community {

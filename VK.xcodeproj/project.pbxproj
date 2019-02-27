@@ -44,6 +44,8 @@
 		7A637C722212C22F0071F399 /* FriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C712212C22F0071F399 /* FriendsPresenter.swift */; };
 		7A637C742212CA540071F399 /* FriendsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C732212CA540071F399 /* FriendsCoordinator.swift */; };
 		7A637C772213C2300071F399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A637C762213C2300071F399 /* Main.storyboard */; };
+		7A78E87D2226566800FA75EA /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E87C2226566800FA75EA /* Storable.swift */; };
+		7A98F63D2226734E00838509 /* RMPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F63C2226734E00838509 /* RMPerson.swift */; };
 		7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */; };
 		7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */; };
 		7AAE11032208706B005E82DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11022208706B005E82DE /* AppCoordinator.swift */; };
@@ -66,6 +68,8 @@
 		7AAE11322209ED7A005E82DE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11312209ED7A005E82DE /* Result.swift */; };
 		7AAE11352209F108005E82DE /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AAE11342209F108005E82DE /* Profile.storyboard */; };
 		7AAE11372209F15F005E82DE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE11362209F15F005E82DE /* ProfileViewController.swift */; };
+		7ACB6C5E2224DE4500BC9A30 /* StorageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB6C5D2224DE4500BC9A30 /* StorageContext.swift */; };
+		7ACB6C602224DE8B00BC9A30 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB6C5F2224DE8B00BC9A30 /* RealmRepository.swift */; };
 		7AE3CBE82211BD8F008EC751 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBE72211BD8F008EC751 /* Friends.storyboard */; };
 		7AE3CBEB2211BDA3008EC751 /* Communities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBEA2211BDA3008EC751 /* Communities.storyboard */; };
 		7AE3CBED2211BDB0008EC751 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE3CBEC2211BDB0008EC751 /* Photos.storyboard */; };
@@ -116,6 +120,8 @@
 		7A637C712212C22F0071F399 /* FriendsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPresenter.swift; sourceTree = "<group>"; };
 		7A637C732212CA540071F399 /* FriendsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCoordinator.swift; sourceTree = "<group>"; };
 		7A637C762213C2300071F399 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7A78E87C2226566800FA75EA /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		7A98F63C2226734E00838509 /* RMPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMPerson.swift; sourceTree = "<group>"; };
 		7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
 		7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		7AAE11022208706B005E82DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -138,6 +144,8 @@
 		7AAE11312209ED7A005E82DE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7AAE11342209F108005E82DE /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7AAE11362209F15F005E82DE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7ACB6C5D2224DE4500BC9A30 /* StorageContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageContext.swift; sourceTree = "<group>"; };
+		7ACB6C5F2224DE8B00BC9A30 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		7AE3CBE72211BD8F008EC751 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		7AE3CBEA2211BDA3008EC751 /* Communities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Communities.storyboard; sourceTree = "<group>"; };
 		7AE3CBEC2211BDB0008EC751 /* Photos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
@@ -300,6 +308,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		7A98F63B2226733100838509 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7A98F63C2226734E00838509 /* RMPerson.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		7AAE10FA22086F33005E82DE /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,8 +370,12 @@
 		7AAE111A220963C2005E82DE /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				7A98F63B2226733100838509 /* Entities */,
 				7AAE111B220963ED005E82DE /* KeyValueStorage.swift */,
 				7AAE111D22096798005E82DE /* KeychainStorage.swift */,
+				7A78E87C2226566800FA75EA /* Storable.swift */,
+				7ACB6C5D2224DE4500BC9A30 /* StorageContext.swift */,
+				7ACB6C5F2224DE8B00BC9A30 /* RealmRepository.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -615,6 +635,7 @@
 				7A13B1052213D4DB008987B7 /* AbstractTableViewItem.swift in Sources */,
 				7A13B10E2213DC99008987B7 /* OnlineView.swift in Sources */,
 				7AF867412208150E007B7A8F /* AppDelegate.swift in Sources */,
+				7ACB6C602224DE8B00BC9A30 /* RealmRepository.swift in Sources */,
 				7A0117B0220C940400F02008 /* ResponseCodable.swift in Sources */,
 				7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */,
 				7A13B1092213D70B008987B7 /* TableViewItemType.swift in Sources */,
@@ -629,6 +650,7 @@
 				7AAE111222088EDC005E82DE /* UIViewController.swift in Sources */,
 				7AAE1126220987E0005E82DE /* AuthAssembler.swift in Sources */,
 				7AAE111422095A06005E82DE /* AuthPresenter.swift in Sources */,
+				7A78E87D2226566800FA75EA /* Storable.swift in Sources */,
 				7AAE112222098784005E82DE /* AbstractModuleBuilder.swift in Sources */,
 				7AAE1129220989CC005E82DE /* AuthModuleBuilder.swift in Sources */,
 				7A0117BC220D850800F02008 /* Friends.swift in Sources */,
@@ -653,6 +675,7 @@
 				7A0117C4220D9E9800F02008 /* ProfilePresenter.swift in Sources */,
 				7A0117C8220DA5B300F02008 /* RequestFactoryHelper.swift in Sources */,
 				7A637C6E2212C10D0071F399 /* FriendsViewController.swift in Sources */,
+				7A98F63D2226734E00838509 /* RMPerson.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
 				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
 				7AE3CBEF22127AF0008EC751 /* Mappable.swift in Sources */,
@@ -661,6 +684,7 @@
 				7A0117D6220ED7D800F02008 /* Photos.swift in Sources */,
 				7A13B1012213D345008987B7 /* UITableView.swift in Sources */,
 				7AAE111E22096798005E82DE /* KeychainStorage.swift in Sources */,
+				7ACB6C5E2224DE4500BC9A30 /* StorageContext.swift in Sources */,
 				7AAE112B2209913A005E82DE /* AppAssembler.swift in Sources */,
 				7AAE11322209ED7A005E82DE /* Result.swift in Sources */,
 				7AAE1105220872E4005E82DE /* AuthCoordinator.swift in Sources */,

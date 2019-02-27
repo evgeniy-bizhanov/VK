@@ -20,7 +20,8 @@ class FriendsAssembler: Assembly {
             return FriendsPresenter(
                 output: output,
                 requestManager: r.resolve(FriendsRequestable.self),
-                storageManager: r.resolve(KeyValueStorage.self))
+                storageManager: r.resolve(KeyValueStorage.self),
+                context: r.resolve(StorageContext.self))
         }
     }
 }

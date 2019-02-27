@@ -23,6 +23,7 @@ class FriendsPresenter: NSObject, FriendsViewInput {
     
     var requestManager: FriendsRequestable?
     let storageManager: KeyValueStorage?
+    let context: StorageContext?
     
     
     // MARK: - Properties
@@ -45,13 +46,20 @@ class FriendsPresenter: NSObject, FriendsViewInput {
             fatalError("User id can't be null")
         }
         
-        requestManager?.get(forUser: userId) { [weak self](response: [VMPerson]) in
+        requestManager?.get(forUser: userId) { [weak self](response: [RMPerson]) in
             
-            guard let self = self else {
+//            guard
+//                let self = self else {
+//                    return
+//            }
+            
+            guard
+                let self = self,
+                let persons = try? response.mapDto(to: [VMPerson].self) else {
                 return
             }
             
-            let sorted = response.sorted { first, second in
+            let sorted = persons.sorted { first, second in
                 first.lastName < second.lastName
             }
             
@@ -76,6 +84,12 @@ class FriendsPresenter: NSObject, FriendsViewInput {
             DispatchQueue.main.async {
                 self.output.fetchedData()
             }
+            
+            do {
+                try self.context?.save(response)
+            } catch {
+                print(error)
+            }
         }
         
     }
@@ -83,10 +97,16 @@ class FriendsPresenter: NSObject, FriendsViewInput {
     
     // MARK: - Initializers
     
-    init(output: FriendsViewOutput, requestManager: FriendsRequestable?, storageManager: KeyValueStorage?) {
+    init(
+        output: FriendsViewOutput,
+        requestManager: FriendsRequestable?,
+        storageManager: KeyValueStorage?,
+        context: StorageContext?) {
+        
         self.output = output
         self.requestManager = requestManager
         self.storageManager = storageManager
+        self.context = context
     }
 }
 

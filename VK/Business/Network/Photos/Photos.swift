@@ -6,15 +6,13 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-import RealmSwift
-
-class Photo: Object, BidirectionalMappable {
+class Photo: BidirectionalMappable {
     let id: Int
     let sizes: [PhotoSize]
     let text: String
 }
 
-class PhotoSize: Object, BidirectionalMappable {
+class PhotoSize: BidirectionalMappable {
     let type: String
     let url: String
     let width: Int

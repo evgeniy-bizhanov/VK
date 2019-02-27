@@ -19,7 +19,7 @@ DEPENDENCIES:
   - Bond (~> 7.1)
   - KeychainAccess (~> 3.1)
   - Kingfisher (~> 5.1)
-  - RealmSwift (~> 3.13)
+  - RealmSwift
   - Swinject (~> 2.5)
 
 SPEC REPOS:
@@ -45,6 +45,6 @@ SPEC CHECKSUMS:
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: 8bf3eef7276cb222fceebcefe947dd1936e073cf
+PODFILE CHECKSUM: 5ea49a5b48821559f3e3b17c6df336aa724f6c97
 
 COCOAPODS: 1.5.3

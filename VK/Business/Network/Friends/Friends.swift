@@ -6,18 +6,15 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-import RealmSwift
-
-@objcMembers
-final class Friend: Object, BidirectionalMappable {
-    dynamic var id: Int = 0
-    dynamic var firstName: String = ""
-    dynamic var lastName: String = ""
-    dynamic var image: String = ""
-    dynamic var online: Int = 0
+struct Person: BidirectionalMappable {
+    let id: Int
+    let firstName: String
+    let lastName: String
+    let image: String
+    let online: Int
 }
 
-extension Friend {
+extension Person {
     enum DecodingKeys: String, CodingKey {
         case id
         case firstName = "first_name"
@@ -26,14 +23,13 @@ extension Friend {
         case online
     }
     
-    convenience init(from decoder: Decoder) throws {
-        self.init()
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: DecodingKeys.self)
         
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.firstName = try container.decode(String.self, forKey: .firstName)
-        self.lastName = try container.decode(String.self, forKey: .lastName)
-        self.image = try container.decode(String.self, forKey: .image)
-        self.online = try container.decode(Int.self, forKey: .online)
+        id = try container.decode(Int.self, forKey: .id)
+        firstName = try container.decode(String.self, forKey: .firstName)
+        lastName = try container.decode(String.self, forKey: .lastName)
+        image = try container.decode(String.self, forKey: .image)
+        online = try container.decode(Int.self, forKey: .online)
     }
 }
