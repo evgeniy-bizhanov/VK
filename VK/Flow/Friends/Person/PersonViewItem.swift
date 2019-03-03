@@ -16,7 +16,7 @@ enum PersonViewType: String, TableViewItemType {
 
 struct PersonViewItem: AbstractTableViewItem {
     
-    typealias Element = VMPerson
+    typealias Element = RMPerson
     
     // MARK: - Properties
     

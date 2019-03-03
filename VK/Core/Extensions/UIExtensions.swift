@@ -207,3 +207,9 @@ private var storedClearStyle: Bool = false
         }
     }
 }
+
+extension Collection {
+    var nonEmpty: Self? {
+        return isEmpty ? nil : self
+    }
+}

@@ -6,7 +6,11 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
+import RealmSwift
+
 protocol StorageContext {
-    func save<T: Storable>(_ object: T) throws
-    func save<T: Sequence>(_ objects: T) throws where T.Iterator.Element: Storable
+    func save<T: Object>(_ object: T) throws
+    func save<T: Sequence>(_ objects: T) throws where T.Iterator.Element: Object
+    
+    func fetch<T: Object>(_ objectType: T.Type) -> Results<T>
 }

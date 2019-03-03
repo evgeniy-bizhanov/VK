@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol FriendsViewInput {
     func didLoad()
@@ -35,6 +36,8 @@ class FriendsPresenter: NSObject, FriendsViewInput {
     
     private lazy var userId: String? = { return storageManager?.string(forKey: "userId") }()
     var contentLetters: [String]?
+    private var token: NotificationToken?
+    private var query: Results<RMPerson>?
     
     
     // MARK: - IBActions
@@ -46,52 +49,69 @@ class FriendsPresenter: NSObject, FriendsViewInput {
             fatalError("User id can't be null")
         }
         
-        requestManager?.get(forUser: userId) { [weak self](response: [RMPerson]) in
+        if let realmPersons = context?.fetch(RMPerson.self).nonEmpty {
+            observe(realmPersons)
+            query = realmPersons
+        } else {
+            friends(forUser: userId)
+        }
+    }
+    
+    private func observe(_ realmPersons: Results<RMPerson>) {
+        token = realmPersons.observe { [weak self] result in
+            guard let self = self else { return }
             
-//            guard
-//                let self = self else {
-//                    return
-//            }
-            
-            guard
-                let self = self,
-                let persons = try? response.mapDto(to: [VMPerson].self) else {
-                return
-            }
-            
-            let sorted = persons.sorted { first, second in
-                first.lastName < second.lastName
-            }
-            
-            let dictionary = Dictionary(grouping: sorted, by: { String($0.lastName.first ?? $0.firstName.first ?? "#") }).sorted { (first, second) in
-                first.key < second.key
-            }
-            
-            let onlinePersons = PersonViewItem(.online, withValues: sorted.filter { $0.isOnline })
-            
-            self.items = [onlinePersons].compactMap { $0 }
-            
-            dictionary.forEach { key, value in
-                if let item = PersonViewItem(.offline, label: key, withValues: value) {
-                    self.items?.append(item)
-                }
-            }
-            
-            self.contentLetters = dictionary.map { key, _ in
-                return key
-            }
-            
-            DispatchQueue.main.async {
-                self.output.fetchedData()
-            }
-            
-            do {
-                try self.context?.save(response)
-            } catch {
+            switch result {
+            case .error(let error):
                 print(error)
+            case .initial(let collection):
+                print(collection)
+                self.translate(items: collection)
+                self.didLoadItems()
+            case .update(_, let deletions, let insertions, let modifications):
+                // Do some stuff
+                break
+            }
+        }
+    }
+    
+    private func friends(forUser userId: String) {
+        requestManager?.get(forUser: userId) { [weak self] (response: [RMPerson]) in
+            
+            guard let self = self else { return }
+            try? self.context?.save(response)
+            self.didLoad()
+        }
+    }
+    
+    func translate(items: Results<RMPerson>) {
+        let sorted = items.sorted { first, second in
+            first.lastName < second.lastName
+        }
+        
+        let dictionary = Dictionary(grouping: sorted, by: { $0.label }).sorted { (first, second) in
+            first.key < second.key
+        }
+        
+        let onlinePersons = PersonViewItem(.online, withValues: sorted.filter { $0.isOnline })
+        
+        self.items = [onlinePersons].compactMap { $0 }
+        
+        dictionary.forEach { key, value in
+            if let item = PersonViewItem(.offline, label: key, withValues: value) {
+                self.items?.append(item)
             }
         }
         
+        self.contentLetters = dictionary.map { key, _ in
+            return key
+        }
+    }
+    
+    func didLoadItems() {
+        DispatchQueue.main.async {
+            self.output.fetchedData()
+        }
     }
     
     
@@ -146,7 +166,7 @@ extension FriendsPresenter: UITableViewDataSource {
                     return
                 }
                 
-                cell.model = item.collection[indexPath.row]
+                cell.model = try? item.collection[indexPath.row].mapDto(to: VMPerson.self)
         }
     }
 }

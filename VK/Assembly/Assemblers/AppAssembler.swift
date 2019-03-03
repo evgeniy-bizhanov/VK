@@ -15,7 +15,20 @@ class AppAssembler: Assembly {
     func assemble(container: Container) {
         
         container.register(KeyValueStorage.self) { _ in return Keychain() }
-        container.register(StorageContext.self) { _ in return RealmStorageContext(db: try! Realm()) }
+        
+        container.register(Realm.Configuration.self) { _ in
+            
+            var configuration = Realm.Configuration.defaultConfiguration
+            configuration.deleteRealmIfMigrationNeeded = true
+            
+            print(configuration.fileURL ?? "")
+            
+            return configuration
+        }
+        
+        container.register(StorageContext.self) { r in
+            return RealmStorageContext(db: try! Realm(configuration: r.resolve(Realm.Configuration.self)!))
+        }
         
         container.register(UIWindow.self) { _ in return UIWindow() }
         

@@ -20,32 +20,3 @@ final class VMPerson: Decodable, CustomStringConvertible {
         return lastName
     }
 }
-
-
-// MARK: - Extensions
-
-
-// MARK: Decodable
-
-extension VMPerson {
-    
-    enum DecodingKeys: String, CodingKey {
-        case id
-        case firstName
-        case lastName
-        case image
-        case isOnline = "online"
-    }
-    
-    convenience init(from decoder: Decoder) throws {
-        self.init()
-        
-        let container = try decoder.container(keyedBy: DecodingKeys.self)
-        
-        id = try container.decode(Int.self, forKey: .id)
-        firstName = try container.decode(String.self, forKey: .firstName)
-        lastName = try container.decode(String.self, forKey: .lastName)
-        image = try container.decode(String.self, forKey: .image)
-        isOnline = try container.decode(Int.self, forKey: .isOnline) > 0
-    }
-}
