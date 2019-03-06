@@ -35,6 +35,7 @@
 		7A13B1152213DCD3008987B7 /* OfflineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A13B1132213DCD3008987B7 /* OfflineView.xib */; };
 		7A13B1172213E646008987B7 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B1162213E646008987B7 /* PersonViewCell.swift */; };
 		7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A18BD9722085B67000C6417 /* AppConfig.swift */; };
+		7A229C74222F7364006F4808 /* Some.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A229C73222F7364006F4808 /* Some.swift */; };
 		7A2B508222169365002E9B08 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B508122169364002E9B08 /* UIExtensions.swift */; };
 		7A637C662212B22B0071F399 /* FriendsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C652212B22B0071F399 /* FriendsAssembler.swift */; };
 		7A637C6A2212B2720071F399 /* CommunitiesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C692212B2720071F399 /* CommunitiesAssembler.swift */; };
@@ -44,6 +45,7 @@
 		7A637C722212C22F0071F399 /* FriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C712212C22F0071F399 /* FriendsPresenter.swift */; };
 		7A637C742212CA540071F399 /* FriendsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A637C732212CA540071F399 /* FriendsCoordinator.swift */; };
 		7A637C772213C2300071F399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A637C762213C2300071F399 /* Main.storyboard */; };
+		7A8D119C222EA89200228AE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A8D119B222EA89200228AE1 /* GoogleService-Info.plist */; };
 		7A98F63D2226734E00838509 /* RMPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98F63C2226734E00838509 /* RMPerson.swift */; };
 		7AAE10FC22086F49005E82DE /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */; };
 		7AAE110122086FCE005E82DE /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */; };
@@ -110,6 +112,7 @@
 		7A13B1132213DCD3008987B7 /* OfflineView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfflineView.xib; sourceTree = "<group>"; };
 		7A13B1162213E646008987B7 /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
 		7A18BD9722085B67000C6417 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		7A229C73222F7364006F4808 /* Some.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Some.swift; sourceTree = "<group>"; };
 		7A2B508122169364002E9B08 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		7A637C652212B22B0071F399 /* FriendsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAssembler.swift; sourceTree = "<group>"; };
 		7A637C692212B2720071F399 /* CommunitiesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesAssembler.swift; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 		7A637C712212C22F0071F399 /* FriendsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPresenter.swift; sourceTree = "<group>"; };
 		7A637C732212CA540071F399 /* FriendsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCoordinator.swift; sourceTree = "<group>"; };
 		7A637C762213C2300071F399 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7A8D119B222EA89200228AE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A98F63C2226734E00838509 /* RMPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMPerson.swift; sourceTree = "<group>"; };
 		7AAE10FB22086F49005E82DE /* AbstractCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
 		7AAE110022086FCE005E82DE /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
@@ -306,6 +310,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		7A229C72222F733F006F4808 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				7A229C73222F7364006F4808 /* Some.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		7A98F63B2226733100838509 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +435,7 @@
 		7AE3CBE42211BD39008EC751 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				7A229C72222F733F006F4808 /* Firebase */,
 				7A13B1182213EBAD008987B7 /* Person */,
 				7A13B10B2213DBD2008987B7 /* Cell */,
 				7AE3CBE72211BD8F008EC751 /* Friends.storyboard */,
@@ -473,6 +486,7 @@
 		7AF8673F2208150E007B7A8F /* VK */ = {
 			isa = PBXGroup;
 			children = (
+				7A8D119B222EA89200228AE1 /* GoogleService-Info.plist */,
 				7AAE112322098790005E82DE /* Assembly */,
 				7A18BD94220858DC000C6417 /* AppDelegate */,
 				7AAE1116220962A7005E82DE /* Business */,
@@ -551,6 +565,7 @@
 				7AE3CBEB2211BDA3008EC751 /* Communities.storyboard in Resources */,
 				7AF8674B2208150F007B7A8F /* LaunchScreen.storyboard in Resources */,
 				7AAE11352209F108005E82DE /* Profile.storyboard in Resources */,
+				7A8D119C222EA89200228AE1 /* GoogleService-Info.plist in Resources */,
 				7AF867482208150F007B7A8F /* Assets.xcassets in Resources */,
 				7A13B10F2213DC99008987B7 /* OnlineView.xib in Resources */,
 			);
@@ -591,28 +606,36 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VK/Pods-VK-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
-				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -626,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A229C74222F7364006F4808 /* Some.swift in Sources */,
 				7A2B508222169365002E9B08 /* UIExtensions.swift in Sources */,
 				7AAE11302209D13D005E82DE /* AppDelegateProxy.swift in Sources */,
 				7A637C702212C1660071F399 /* FriendsModuleBuilder.swift in Sources */,

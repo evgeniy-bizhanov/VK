@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import FirebaseFirestore
+import FirebaseDatabase
 
 protocol FriendsViewInput {
     func didLoad()
@@ -39,6 +41,8 @@ class FriendsPresenter: NSObject, FriendsViewInput {
     private var token: NotificationToken?
     private var query: Results<RMPerson>?
     
+    private let ref = Database.database().reference(withPath: "somes")
+    
     
     // MARK: - IBActions
     // MARK: - Functions
@@ -52,10 +56,40 @@ class FriendsPresenter: NSObject, FriendsViewInput {
         if let realmPersons = context?.fetch(RMPerson.self).nonEmpty {
             observe(realmPersons)
             query = realmPersons
+            saveToFirestore(query!.reversed(), forUser: userId)
+            saveToDatabase()
         } else {
             friends(forUser: userId)
         }
     }
+    
+    private func saveToFirestore(_ persons: [RMPerson], forUser userId: String) {
+        
+        let database = Firestore.firestore()
+        
+        persons.forEach { person in
+            database
+                .collection(userId).document("Friends")
+                .collection("\(person.id)").document("Detail")
+                .setData(person.toFirestore(), merge: true) { error in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else {
+                        print("data saved")
+                    }
+            }
+        }
+    }
+    
+    private func saveToDatabase() {
+        
+        (0...5).forEach { index in
+            let some = Some(id: index, description: "Some object \(index + 1)")
+            let ref = self.ref.child("Some \(index + 1)")
+            ref.setValue(some.toDatabase())
+        }
+    }
+
     
     private func observe(_ realmPersons: Results<RMPerson>) {
         token = realmPersons.observe { [weak self] result in
@@ -127,6 +161,10 @@ class FriendsPresenter: NSObject, FriendsViewInput {
         self.requestManager = requestManager
         self.storageManager = storageManager
         self.context = context
+    }
+    
+    deinit {
+        token = nil
     }
 }
 

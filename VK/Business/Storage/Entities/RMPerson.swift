@@ -23,6 +23,14 @@ final class RMPerson: Object, BidirectionalMappable {
     var label: String {
         return String(lastName.first ?? firstName.first ?? "#")
     }
+    
+    func toFirestore() -> [String: Any] {
+        return [
+            "Id" : id,
+            "FirstName": firstName,
+            "LastName": lastName
+        ]
+    }
 }
 
 // MARK: Decodable
