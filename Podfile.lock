@@ -1,50 +1,28 @@
 PODS:
   - Alamofire (4.8.1)
-  - Bond (7.1.0):
-    - Differ (~> 1.3)
-    - ReactiveKit (~> 3.9)
-  - Differ (1.3.0)
   - KeychainAccess (3.1.2)
   - Kingfisher (5.1.1)
-  - ReactiveKit (3.9.7)
-  - Realm (3.13.1):
-    - Realm/Headers (= 3.13.1)
-  - Realm/Headers (3.13.1)
-  - RealmSwift (3.13.1):
-    - Realm (= 3.13.1)
   - Swinject (2.5.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8)
-  - Bond (~> 7.1)
   - KeychainAccess (~> 3.1)
   - Kingfisher (~> 5.1)
-  - RealmSwift (~> 3.13)
   - Swinject (~> 2.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - Bond
-    - Differ
     - KeychainAccess
     - Kingfisher
-    - ReactiveKit
-    - Realm
-    - RealmSwift
     - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  Bond: 4823d28dcb3b2d5fcc49bc6112f004db1e82fb22
-  Differ: 9fcee7602542d7c6484ce05a0faec1c11258ed63
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
-  ReactiveKit: 5f4c440715d671901c382ae6b42ed3337ce4699b
-  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
-  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: 8bf3eef7276cb222fceebcefe947dd1936e073cf
+PODFILE CHECKSUM: bf7bb1635871fed55ba7615c40571c7e936d2265
 
 COCOAPODS: 1.5.3
