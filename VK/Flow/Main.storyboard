@@ -12,7 +12,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="y4a-uw-Hab">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tle-kC-ndH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="Jd1-Sp-x00" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V7H-lF-IlX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -20,13 +19,25 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="4LA-VP-Dio" kind="relationship" relationship="viewControllers" id="s1S-1P-KWu"/>
                         <segue destination="c75-8n-oGo" kind="relationship" relationship="viewControllers" id="rbu-vJ-goy"/>
                         <segue destination="gHu-Jj-2FX" kind="relationship" relationship="viewControllers" id="3cZ-4m-qdD"/>
                         <segue destination="3Jp-0w-MQS" kind="relationship" relationship="viewControllers" id="SPl-hc-cbj"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tle-kC-ndH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-471" y="151"/>
+        </scene>
+        <!--Newsfeed-->
+        <scene sceneID="whb-s6-cA3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Newsfeed" id="4LA-VP-Dio" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="JQF-5c-XCB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxb-1C-KDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="-49"/>
         </scene>
         <!--Friends-->
         <scene sceneID="tU3-8j-FZk">
@@ -36,7 +47,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yU-0V-ThB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147" y="30"/>
+            <point key="canvasLocation" x="77" y="31"/>
         </scene>
         <!--Communities-->
         <scene sceneID="oX9-w2-nP3">
@@ -46,7 +57,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryX-1R-UUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="150"/>
+            <point key="canvasLocation" x="104" y="150"/>
         </scene>
         <!--Photos-->
         <scene sceneID="Mtq-K0-d7Y">
@@ -56,7 +67,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edV-QK-1AC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145" y="272"/>
+            <point key="canvasLocation" x="74" y="272"/>
         </scene>
     </scenes>
 </document>
