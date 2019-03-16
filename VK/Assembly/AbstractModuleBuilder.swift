@@ -16,7 +16,8 @@ fileprivate let assembler = Assembler(
         AuthAssembler(),
         FriendsAssembler(),
         CommunitiesAssembler(),
-        PhotosAssembler()
+        PhotosAssembler(),
+        NewsfeedAssembler()
     ]
 )
 

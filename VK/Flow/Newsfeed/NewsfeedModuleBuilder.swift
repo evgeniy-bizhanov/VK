@@ -6,4 +6,13 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-import Foundation
+import Swinject
+
+class NewsfeedModuleBuilder: AbstractModuleBuilder {
+    
+    @IBOutlet weak var vc: NewsfeedViewController!
+    
+    override func resolve(resolver: Resolver) {
+        vc.input = resolver.resolve(NewsfeedInput.self, argument: vc as NewsfeedOutput)
+    }
+}

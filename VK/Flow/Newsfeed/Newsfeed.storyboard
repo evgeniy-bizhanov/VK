@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Лента-->
+        <!--Vc-->
         <scene sceneID="4hU-pA-OxD">
             <objects>
-                <viewController id="des-Zx-26t" sceneMemberID="viewController">
+                <viewController id="des-Zx-26t" customClass="NewsfeedViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="quY-38-Pxt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -21,6 +21,11 @@
                     <navigationItem key="navigationItem" title="Лента" id="EXH-uk-yH2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjR-vd-5IM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="J06-Rk-Sa1" customClass="NewsfeedModuleBuilder" customModule="VK" customModuleProvider="target">
+                    <connections>
+                        <outlet property="vc" destination="des-Zx-26t" id="Ikq-fs-i86"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="812" y="219.94002998500753"/>
         </scene>

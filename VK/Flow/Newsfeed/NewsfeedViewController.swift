@@ -6,4 +6,30 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol NewsfeedOutput: class {}
+
+class NewsfeedViewController: UIViewController {
+    
+    // MARK: - Models
+    // MARK: - Services
+    // MARK: - Properties
+    
+    var input: NewsfeedInput?
+    
+    
+    // MARK: - Fields
+    // MARK: - IBActions
+    // MARK: - Functions
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        input?.didLoad()
+    }
+    
+    
+    // MARK: - Initializers
+}
+
+extension NewsfeedViewController: NewsfeedOutput {}
