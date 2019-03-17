@@ -6,7 +6,7 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-struct Friend: BidirectionalMappable {
+struct Person: BidirectionalMappable {
     let id: Int
     let firstName: String
     let lastName: String
@@ -14,7 +14,7 @@ struct Friend: BidirectionalMappable {
     let online: Int
 }
 
-extension Friend {
+extension Person {
     enum DecodingKeys: String, CodingKey {
         case id
         case firstName = "first_name"

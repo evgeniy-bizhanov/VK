@@ -25,11 +25,16 @@ extension AbstractRequestManager {
         request: URLRequestConvertible,
         completion: Completion<T>?) -> DataRequest {
         
+        print(try! request.asURLRequest())
+        
         return sessionManager
             .request(request)
             .responseCodable(queue: queue) { (response: DataResponse<T>) in
-                guard let data = response.value else {
-                    preconditionFailure("Failure: Response was a nil")
+                guard
+                    response.error == nil,
+                    let data = response.value else {
+                        print(response.error!)
+                        preconditionFailure("Failure: Response was a nil")
                 }
                 
                 completion?(data)

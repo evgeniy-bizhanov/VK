@@ -12,7 +12,7 @@ import Alamofire
 
 protocol FriendsRequestable {
     
-    typealias Friends = Response<Friend>
+    typealias Friends = Response<Person>
     typealias Completion<T: Decodable> = (T) -> Void
     
     /// Gets specified numbers of friends

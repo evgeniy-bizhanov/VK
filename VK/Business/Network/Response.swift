@@ -13,13 +13,27 @@ struct Response<T: BidirectionalMappable>: Decodable {
 struct ResponseData<T: BidirectionalMappable>: BidirectionalMappable {
     let count: Int?
     let items: [T]
+    let profiles: [Person]?
+    let groups: [Community]?
+    let newOffset: String?
     let nextFrom: String?
 }
 
 extension ResponseData {
-    enum CodingKeys: String, CodingKey {
-        case count
-        case items
+    enum DecodingKeys: String, CodingKey {
+        case newOffset = "new_offset"
         case nextFrom = "next_from"
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let decodingContainer = try decoder.container(keyedBy: DecodingKeys.self)
+        
+        count = try? container.decode(Int.self, forKey: .count)
+        items = try container.decode([T].self, forKey: .items)
+        profiles = try? container.decode([Person].self, forKey: .profiles)
+        groups = try? container.decode([Community].self, forKey: .groups)
+        newOffset = try? decodingContainer.decode(String.self, forKey: .newOffset)
+        nextFrom = try? decodingContainer.decode(String.self, forKey: .nextFrom)
     }
 }

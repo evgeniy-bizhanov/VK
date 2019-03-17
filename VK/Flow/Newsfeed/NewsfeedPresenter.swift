@@ -28,7 +28,9 @@ class NewsfeedPresenter: NewsfeedInput {
     
     func didLoad() {
         
-        requestManager?.get(count: 1, withFilters: "post") { (r: ResponseData<NewsfeedItem>) in print(r)}
+        requestManager?.get(withFilters: "post,photo") { (newsfeed: VMNewsfeed) in
+            print(newsfeed)
+        }
 
     }
     

@@ -28,17 +28,17 @@ protocol NewsfeedRequestable {
     /// - Parameter maxPhotos: The maximum number of photographs that must be returned.
     /// Default: 5, maximum value: 100.
     func get<T>(
-        from startFrom: String?, count: Int,
+        from startFrom: String?, count: Int?,
         withFilters filters: String,
-        maxPhotos: Int,
+        maxPhotos: Int?,
         completion: Completion<T>?)
 }
 
 extension NewsfeedRequestable {
     func get<T>(
-        from startFrom: String? = nil, count: Int = 50,
-        withFilters filters: String = "post,photo",
-        maxPhotos: Int = 5,
+        from startFrom: String? = nil, count: Int? = nil,
+        withFilters filters: String = "post",
+        maxPhotos: Int? = nil,
         completion: Completion<T>?) {
         
         get(from: startFrom, count: count, withFilters: filters, maxPhotos: maxPhotos, completion: completion)
@@ -53,9 +53,9 @@ final class NewsfeedRequestManager: NewsfeedRequestable {
     var requestManager: AbstractRequestManager!
     
     func get<T>(
-        from startFrom: String?, count: Int,
+        from startFrom: String?, count: Int?,
         withFilters filters: String,
-        maxPhotos: Int,
+        maxPhotos: Int?,
         completion: Completion<T>?) {
         
         let urlRequest = GetRequestRouter(
@@ -68,12 +68,12 @@ final class NewsfeedRequestManager: NewsfeedRequestable {
         )
         
         requestManager.request(request: urlRequest) { (data: Newsfeed) in
-            
-            guard let data = try? data.response.mapDto(to: T.self) else {
+            do {
+                let data = try data.response.mapDto(to: T.self)
+                completion?(data)
+            } catch {
                 preconditionFailure("Failure: Cant map \(T.self)")
             }
-            
-            completion?(data)
         }
     }
     
