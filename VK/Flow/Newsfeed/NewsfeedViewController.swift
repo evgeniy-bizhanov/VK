@@ -8,9 +8,16 @@
 
 import UIKit
 
-protocol NewsfeedOutput: class {}
+protocol NewsfeedOutput: class {
+    func reloadView()
+}
 
 class NewsfeedViewController: UIViewController {
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet var tableView: UITableView!
+    
     
     // MARK: - Models
     // MARK: - Services
@@ -25,6 +32,9 @@ class NewsfeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = input as? UITableViewDataSource
+        
         input?.didLoad()
     }
     
@@ -32,4 +42,8 @@ class NewsfeedViewController: UIViewController {
     // MARK: - Initializers
 }
 
-extension NewsfeedViewController: NewsfeedOutput {}
+extension NewsfeedViewController: NewsfeedOutput {
+    func reloadView() {
+        tableView.reloadData()
+    }
+}

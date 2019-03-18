@@ -19,6 +19,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tableView>
                     <navigationItem key="navigationItem" title="Лента" id="EXH-uk-yH2"/>
+                    <connections>
+                        <outlet property="tableView" destination="quY-38-Pxt" id="ERn-jQ-Szn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjR-vd-5IM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="J06-Rk-Sa1" customClass="NewsfeedModuleBuilder" customModule="VK" customModuleProvider="target">

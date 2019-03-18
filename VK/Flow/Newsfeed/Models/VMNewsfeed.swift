@@ -6,7 +6,7 @@
 //  Copyright © 2019 Евгений Бижанов. All rights reserved.
 //
 
-class VMNewsfeed: Decodable {
+struct VMNewsfeed: Decodable {
     let items: [VMNewsfeedItem]
     let profiles: [VMPerson]?
     let groups: [VMCommunity]?
@@ -14,7 +14,7 @@ class VMNewsfeed: Decodable {
     let nextFrom: String?
 }
 
-class VMNewsfeedItem: Decodable {
+struct VMNewsfeedItem: Decodable {
     let type: String
     let sourceId: Int
     let date: Int
@@ -23,4 +23,8 @@ class VMNewsfeedItem: Decodable {
     let likes: VMLikes?
     let reposts: VMReposts?
     let photos: VMPhotos?
+}
+
+extension VMNewsfeedItem {
+    var sourceIsUser: Bool { return sourceId > 0 }
 }

@@ -15,10 +15,10 @@ extension UITableView {
     typealias Transform<T> = (T?) -> Void
     
     // FIXME: Need to be resolved throuthout inheritance, cause of applies absolutely to all instance in current time
-    override open var intrinsicContentSize: CGSize {
-        self.layoutIfNeeded()
-        return CGSize(width: UIView.noIntrinsicMetric, height: self.contentSize.height)
-    }
+//    override open var intrinsicContentSize: CGSize {
+//        self.layoutIfNeeded()
+//        return CGSize(width: UIView.noIntrinsicMetric, height: self.contentSize.height)
+//    }
     
     /// Gets a reusable cell out of the queue or register new one
     /// Can transform cell throught closure before return
@@ -32,6 +32,21 @@ extension UITableView {
         transformWith transform: Transform<T>?) -> UITableViewCell {
         
         let cell = dequeueReusableCell(withIdentifier: identifier, for: indexPath, fromNib: nibName)
+        transform?(cell as? T)
+        
+        return cell
+    }
+    
+    /// Gets a reusable cell out of the queue or register new one
+    /// Can transform cell throught closure before return
+    ///
+    /// - Parameter indexPath: The index path specifying the location of the cell
+    /// - Parameter nibName: A string identifying the nib cell. if this parameter is nil, it equated to identifier
+    /// - Parameter transform: Transformation closure based on generic parameter
+    func dequeueReusableCell<T: Identifiable>(for indexPath: IndexPath, fromNib nibName: String? = nil,
+                                              transformWith transform: Transform<T>?) -> UITableViewCell {
+        
+        let cell = dequeueReusableCell(withIdentifier: T.identifier, for: indexPath, fromNib: nibName)
         transform?(cell as? T)
         
         return cell
