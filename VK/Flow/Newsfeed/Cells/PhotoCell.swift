@@ -1,5 +1,5 @@
 //
-//  PhotoContentCell.swift
+//  PhotoCell.swift
 //  VK
 //
 //  Created by Евгений Бижанов on 17/03/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoContentCell: UITableViewCell {
+class PhotoCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -34,6 +34,7 @@ class NewsfeedViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = input as? UITableViewDataSource
+        tableView.delegate = self
         
         input?.didLoad()
     }
@@ -45,5 +46,12 @@ class NewsfeedViewController: UIViewController {
 extension NewsfeedViewController: NewsfeedOutput {
     func reloadView() {
         tableView.reloadData()
+    }
+}
+
+extension NewsfeedViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 8
     }
 }
