@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoCell: UITableViewCell {
+class PhotoCell: UITableViewCell, Identifiable {
 
     override func awakeFromNib() {
         super.awakeFromNib()

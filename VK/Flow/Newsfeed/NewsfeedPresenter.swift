@@ -36,7 +36,7 @@ class NewsfeedPresenter: NSObject, NewsfeedInput {
     
     func didLoad() {
         
-        requestManager?.get(withFilters: "post,photo") { [weak self](newsfeed: VMNewsfeed) in
+        requestManager?.get(withFilters: "photo") { [weak self](newsfeed: VMNewsfeed) in
             guard let self = self else {
                 return
             }
@@ -135,6 +135,8 @@ extension NewsfeedPresenter: UITableViewDataSource {
         switch item.type {
         case "post":
             return postCell(forNewsfeedItem: item, tableView, cellForRowAt: indexPath)
+        case "photo":
+            return photoCell(forNewsfeedItem: item, tableView, cellForRowAt: indexPath)
         default:
             return UITableViewCell()
         }
@@ -149,6 +151,16 @@ extension NewsfeedPresenter: UITableViewDataSource {
         
         return tableView.dequeueReusableCell(for: indexPath) { (cell: PostCell?) in
             cell?.model = model
+        }
+    }
+    
+    fileprivate func photoCell(
+        forNewsfeedItem item: VMNewsfeedItem,
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        return tableView.dequeueReusableCell(for: indexPath) { (cell: PhotoCell?) in
+            //
         }
     }
     

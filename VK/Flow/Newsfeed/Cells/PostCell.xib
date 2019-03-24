@@ -20,17 +20,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXS-no-KaR">
-                        <rect key="frame" x="16" y="11" width="288" height="22"/>
+                        <rect key="frame" x="12" y="3" width="296" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="nXS-no-KaR" secondAttribute="trailing" id="Tdr-7E-lLS"/>
-                    <constraint firstItem="nXS-no-KaR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Y6C-Tc-yrM"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nXS-no-KaR" secondAttribute="trailing" constant="-4" id="Tdr-7E-lLS"/>
+                    <constraint firstItem="nXS-no-KaR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-4" id="Y6C-Tc-yrM"/>
                     <constraint firstAttribute="bottomMargin" secondItem="nXS-no-KaR" secondAttribute="bottom" id="avi-Cl-ufc"/>
-                    <constraint firstItem="nXS-no-KaR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="mAW-ze-DXG"/>
+                    <constraint firstItem="nXS-no-KaR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="mAW-ze-DXG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
