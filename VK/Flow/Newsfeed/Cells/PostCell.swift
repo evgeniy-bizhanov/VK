@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostCell: UITableViewCell, Identifiable {
+class PostCell: UITableViewCell, Identifiable, SeparatableCell {
 
     @IBOutlet weak var postedTextLabel: UILabel!
     

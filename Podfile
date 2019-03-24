@@ -12,5 +12,6 @@ target 'VK' do
   pod 'Kingfisher', '~> 5.1'
   pod 'Swinject', '~> 2.5'
   pod 'KeychainAccess', '~> 3.1'
+  pod 'R.swift', '~> 5.0'
 
 end

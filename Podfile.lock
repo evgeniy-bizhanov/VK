@@ -2,12 +2,16 @@ PODS:
   - Alamofire (4.8.1)
   - KeychainAccess (3.1.2)
   - Kingfisher (5.1.1)
+  - R.swift (5.0.2):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
   - Swinject (2.5.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8)
   - KeychainAccess (~> 3.1)
   - Kingfisher (~> 5.1)
+  - R.swift (~> 5.0)
   - Swinject (~> 2.5)
 
 SPEC REPOS:
@@ -15,14 +19,18 @@ SPEC REPOS:
     - Alamofire
     - KeychainAccess
     - Kingfisher
+    - R.swift
+    - R.swift.Library
     - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
+  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: bf7bb1635871fed55ba7615c40571c7e936d2265
+PODFILE CHECKSUM: cc257d8649021b8fc22216341470b48855022ef9
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.5.3

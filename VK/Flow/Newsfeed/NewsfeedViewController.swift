@@ -67,7 +67,7 @@ extension NewsfeedViewController: UITableViewDelegate {
         return 4
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func createHeaderFooterView(isFooter: Bool = false) -> UITableViewHeaderFooterView {
         let view = UITableViewHeaderFooterView()
         
         let line = UIView()
@@ -77,27 +77,21 @@ extension NewsfeedViewController: UITableViewDelegate {
         
         line.heightAnchor.constraint(equalToConstant: 1).isActive = true
         line.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        line.topAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        line.topAnchor.constraint(equalTo: isFooter ? view.topAnchor : view.bottomAnchor).isActive = true
         
         return view
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return createHeaderFooterView()
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UITableViewHeaderFooterView()
-        
-        let line = UIView()
-        line.translatesAutoresizingMaskIntoConstraints = false
-        line.backgroundColor = UIColor(red: 225/255, green: 225/255, blue: 225/255, alpha: 1)
-        view.addSubview(line)
-        
-        line.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        line.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        line.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        
-        return view
+        return createHeaderFooterView(isFooter: true)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.separatorInset = UIEdgeInsets(top: 0, left: cell.frame.maxX, bottom: 0, right: 0)
+        (cell as? SeparatableCell)?.setupSeparator(with: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
+        (cell as? NonseparatableCell)?.removeSeparator()
     }
 }

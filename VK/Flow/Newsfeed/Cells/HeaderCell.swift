@@ -9,7 +9,7 @@
 import Kingfisher
 import UIKit
 
-class HeaderCell: UITableViewCell, Identifiable {
+class HeaderCell: UITableViewCell, Identifiable, NonseparatableCell {
     
     @IBOutlet weak var postedImage: UIImageView!
     @IBOutlet weak var postedName: UILabel!

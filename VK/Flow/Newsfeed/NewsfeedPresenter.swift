@@ -67,7 +67,7 @@ extension NewsfeedPresenter: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let section = newsfeed?.items[section] else { return 0 }
-        return section.type == "post" ? 2 : 1
+        return section.type == "post" ? 3 : 2
     }
     
     fileprivate func headerCell(
@@ -98,6 +98,32 @@ extension NewsfeedPresenter: UITableViewDataSource {
         
         return tableView.dequeueReusableCell(for: indexPath) { (cell: HeaderCell?) in
             cell?.model = headerModel
+        }
+    }
+    
+    fileprivate func footerCell(
+        forNewsfeedItem item: VMNewsfeedItem,
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard
+            let likes = item.likes,
+            let reposts = item.reposts else {
+                return UITableViewCell()
+        }
+        
+        return tableView.dequeueReusableCell(for: indexPath) { (cell: FooterCell?) in
+            cell?.counterDelegate = { count in
+                if count > 999 {
+                    return String(format: "%.1fK", Float(count) / 1000)
+                } else if count > 999999 {
+                    return String(format: "%.1fM", Float(count) / 1000000)
+                } else if count > 999999999 {
+                    return String(format: "%.1fB", Double(count) / 1000000000)
+                }
+                return String(count)
+            }
+            cell?.model = FooterCellModel(likes: likes, reposts: reposts)
         }
     }
     
@@ -137,6 +163,8 @@ extension NewsfeedPresenter: UITableViewDataSource {
             return headerCell(forNewsfeedItem: item, tableView, cellForRowAt: indexPath)
         case 1:
             return contentCell(forNewsfeedItem: item, tableView, cellForRowAt: indexPath)
+        case 2:
+            return footerCell(forNewsfeedItem: item, tableView, cellForRowAt: indexPath)
         default:
             return UITableViewCell()
         }
