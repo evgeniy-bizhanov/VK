@@ -25,6 +25,9 @@
 		7A11A22F2247433A0004CAF8 /* SeparatableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11A22E2247433A0004CAF8 /* SeparatableCell.swift */; };
 		7A11A23222474FF90004CAF8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11A23122474FF90004CAF8 /* R.generated.swift */; };
 		7A11A234224757F20004CAF8 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11A233224757F20004CAF8 /* Operators.swift */; };
+		7A11A23B224760A60004CAF8 /* CollectionPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11A239224760A60004CAF8 /* CollectionPhotoCell.swift */; };
+		7A11A23C224760A60004CAF8 /* CollectionPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A11A23A224760A60004CAF8 /* CollectionPhotoCell.xib */; };
+		7A11A23E224760F50004CAF8 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11A23D224760F50004CAF8 /* UICollectionView.swift */; };
 		7A13B0FA2213C3E5008987B7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B0F92213C3E5008987B7 /* MainCoordinator.swift */; };
 		7A13B0FC2213CA63008987B7 /* CommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B0FB2213CA63008987B7 /* CommunitiesViewController.swift */; };
 		7A13B0FE2213CA75008987B7 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B0FD2213CA75008987B7 /* PhotosViewController.swift */; };
@@ -120,6 +123,9 @@
 		7A11A22E2247433A0004CAF8 /* SeparatableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatableCell.swift; sourceTree = "<group>"; };
 		7A11A23122474FF90004CAF8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7A11A233224757F20004CAF8 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		7A11A239224760A60004CAF8 /* CollectionPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPhotoCell.swift; sourceTree = "<group>"; };
+		7A11A23A224760A60004CAF8 /* CollectionPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPhotoCell.xib; sourceTree = "<group>"; };
+		7A11A23D224760F50004CAF8 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		7A13B0F92213C3E5008987B7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		7A13B0FB2213CA63008987B7 /* CommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewController.swift; sourceTree = "<group>"; };
 		7A13B0FD2213CA75008987B7 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -376,6 +382,8 @@
 				7AD422CE22413BD9009EFA06 /* PostCell.xib */,
 				7A4F9ADB223E2C2100F510DF /* FooterCell.swift */,
 				7A4F9ADC223E2C2100F510DF /* FooterCell.xib */,
+				7A11A239224760A60004CAF8 /* CollectionPhotoCell.swift */,
+				7A11A23A224760A60004CAF8 /* CollectionPhotoCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -441,6 +449,7 @@
 				7AAE110D22088E6F005E82DE /* UIStoryboard.swift */,
 				7AAE111122088EDC005E82DE /* UIViewController.swift */,
 				7A13B1002213D345008987B7 /* UITableView.swift */,
+				7A11A23D224760F50004CAF8 /* UICollectionView.swift */,
 				7AE3CBF22212856F008EC751 /* Foundation.swift */,
 			);
 			path = Extensions;
@@ -658,6 +667,7 @@
 				7A4F9ADE223E2C2100F510DF /* FooterCell.xib in Resources */,
 				7AAE11352209F108005E82DE /* Profile.storyboard in Resources */,
 				7AF867482208150F007B7A8F /* Assets.xcassets in Resources */,
+				7A11A23C224760A60004CAF8 /* CollectionPhotoCell.xib in Resources */,
 				7A13B10F2213DC99008987B7 /* OnlineView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,7 +711,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/VK/Resources/R.generated.swift,
+				"$SRCROOT/VK/Resources/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -753,6 +763,7 @@
 				7A290D5D223CCC52003D5ADC /* NewsfeedPresenter.swift in Sources */,
 				7A4F9AD5223E2BDD00F510DF /* HeaderCell.swift in Sources */,
 				7A637C702212C1660071F399 /* FriendsModuleBuilder.swift in Sources */,
+				7A11A23E224760F50004CAF8 /* UICollectionView.swift in Sources */,
 				7A13B1052213D4DB008987B7 /* AbstractTableViewItem.swift in Sources */,
 				7A4F9ACA223E03D300F510DF /* VMNewsfeed.swift in Sources */,
 				7A4F9ACF223E1B0700F510DF /* Comments+Likes+Reposts+Photos.swift in Sources */,
@@ -806,6 +817,7 @@
 				7A637C6E2212C10D0071F399 /* FriendsViewController.swift in Sources */,
 				7A18BD9822085B67000C6417 /* AppConfig.swift in Sources */,
 				7AAE111C220963ED005E82DE /* KeyValueStorage.swift in Sources */,
+				7A11A23B224760A60004CAF8 /* CollectionPhotoCell.swift in Sources */,
 				7AE3CBEF22127AF0008EC751 /* Mappable.swift in Sources */,
 				7A637C6A2212B2720071F399 /* CommunitiesAssembler.swift in Sources */,
 				7A0117DF220EED9C00F02008 /* CommunitiesRequestable.swift in Sources */,
@@ -894,6 +906,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -948,6 +961,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

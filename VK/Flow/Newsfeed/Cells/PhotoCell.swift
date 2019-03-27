@@ -9,10 +9,17 @@
 import UIKit
 
 class PhotoCell: UITableViewCell, Identifiable {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    weak var dataSource: UICollectionViewDataSource!
+    weak var delegate: UICollectionViewDelegate!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        collectionView.dataSource = dataSource
+        collectionView.delegate = delegate
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

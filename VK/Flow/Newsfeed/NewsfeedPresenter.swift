@@ -160,7 +160,7 @@ extension NewsfeedPresenter: UITableViewDataSource {
         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         return tableView.dequeueReusableCell(for: indexPath) { (cell: PhotoCell?) in
-            //
+//            cell?.dataSource = self
         }
     }
     
@@ -180,5 +180,26 @@ extension NewsfeedPresenter: UITableViewDataSource {
         default:
             return UITableViewCell()
         }
+    }
+}
+
+
+// MARK: - UICollectionViewDataSource
+
+class NewsfeedPhotoFlowManager: NSObject {
+    let photos: [VMPhoto]
+    
+    init(photos: [VMPhoto]) {
+        self.photos = photos
+    }
+}
+
+extension NewsfeedPhotoFlowManager: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
     }
 }
