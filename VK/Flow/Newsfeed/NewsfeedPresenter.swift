@@ -36,7 +36,7 @@ class NewsfeedPresenter: NSObject, NewsfeedInput {
     
     func didLoad() {
         
-        requestManager?.get(withFilters: "photo") { [weak self](newsfeed: VMNewsfeed) in
+        requestManager?.get(withFilters: "post") { [weak self](newsfeed: VMNewsfeed) in
             guard let self = self else {
                 return
             }
